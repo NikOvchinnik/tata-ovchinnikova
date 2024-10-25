@@ -1,23 +1,30 @@
-.imgContainer {
+.cardContainer {
   width: 280px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.imgContainer {
   height: 373px;
   position: relative;
 }
 
 .cardImg {
-  width: 280px; /* Залишаємо ширину зображення на 100%, щоб займати всю ширину контейнера */
-  height: 373px; /* Зберігаємо пропорції зображення */
-  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .newContainer {
   position: absolute;
   top: 10px;
   left: 10px;
-  background-color: var(--background);
+  background-color: rgba(255, 255, 255, 0.8);
   padding: 4px 8px;
   border-radius: 4px;
   font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Додаємо тінь */
 }
 
 .cardBtn {
@@ -25,27 +32,74 @@
   bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: var(--background);
+  background-color: transparent; /* Прозорий фон */
+  color: white; /* Колір тексту */
+  border: 1px solid rgba(255, 255, 255, 0.8); /* Легка рамка */
   padding: 4px 8px;
   border-radius: 4px;
   font-weight: bold;
+  transition: background-color 0.3s, color 0.3s; /* Анімація при наведенні */
+}
+
+.cardBtn:hover {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.3
+  ); /* Злегка затемнюємо при наведенні */
+  color: var(--background); /* Змінюємо колір тексту */
 }
 
 .textContainer {
-  width: 280px;
   display: flex;
   flex-direction: column;
   gap: 4px;
+  padding: 10px; 
+}
+
+.titleCard {
+  font-size: 18px;
+  font-weight: 600; 
 }
 
 .sizeList {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
 }
 
 .sizeItem {
-  font-size: 10px;
-  padding: 1px 4px;
+  font-size: 12px; 
+  padding: 2px 6px; 
   border: 1px solid #ccc;
+  border-radius: 4px; 
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.sizeItem:hover {
+  background-color: rgba(41, 54, 136, 0.1); 
+  border-color: rgba(41, 54, 136, 0.5); 
+}
+
+.priceCard {
+  display: flex;
+  justify-content: center;
+  font-size: 16px; 
+  font-weight: bold; 
+  color: var(--title);
+}
+
+.btnBuy {
+  background-color: var(--background);
+  border: 1px solid #ccc;
+  padding: 6px 10px;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s; /* Анімація при наведенні */
+}
+
+.btnBuy:hover {
+  background-color: rgba(0, 0, 0, 0.1); /* Затемнення при наведенні */
 }

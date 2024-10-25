@@ -2,7 +2,7 @@ import style from './CatalogCard.module.css';
 
 const CatalogCard = ({ card }) => {
   return (
-    <li>
+    <li className={style.cardContainer}>
       <div className={style.imgContainer}>
         <img
           src={card.images}
@@ -16,10 +16,9 @@ const CatalogCard = ({ card }) => {
             <p>NEW</p>
           </div>
         )}
-        <button className={style.cardBtn}>Детальніше</button>
       </div>
       <div className={style.textContainer}>
-        <h3>{card.title}</h3>
+        <h3 className={style.titleCard}>{card.title}</h3>
         <ul className={style.sizeList}>
           {card.sizes.map(size => (
             <li key={size} className={style.sizeItem}>
@@ -27,7 +26,8 @@ const CatalogCard = ({ card }) => {
             </li>
           ))}
         </ul>
-        <p>{card.price} UAH</p>
+        <p className={style.priceCard}>{card.price} UAH</p>
+        <button className={style.btnBuy}>Замовити</button>
       </div>
     </li>
   );

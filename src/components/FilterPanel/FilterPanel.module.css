@@ -1,5 +1,11 @@
 .filterContainer{
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.titleCatalog {
+    margin-bottom: 15px;
+    font-size: 32px; 
+    font-weight: 700;
 }
 
 .filterList {
@@ -7,8 +13,10 @@
     gap: 20px;
 }
 
-.filterItem{
-    padding: 4px 8px;
+.filterItem {
+    padding: 6px 12px;
     border: 1px solid #ccc;
     border-radius: 8px;
+    color: #555; 
+    font-weight: 500;
 }

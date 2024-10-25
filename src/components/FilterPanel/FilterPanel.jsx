@@ -3,7 +3,7 @@ import style from './FilterPanel.module.css';
 const FilterPanel = () => {
   return (
     <div className={style.filterContainer}>
-      <h1>Tata Catalog</h1>
+      <h1 className={style.titleCatalog}>Tata Catalog</h1>
       <ul className={style.filterList}>
         <li className={style.filterItem}>Нові</li>
         <li className={style.filterItem}>Жіночий одяг</li>
