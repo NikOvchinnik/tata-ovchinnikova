@@ -1,12 +1,15 @@
 .header {
   background-color: var(--background);
-  box-shadow: 2px 2px 12px rgba(41, 54, 136, .1);
+  box-shadow: 2px 2px 12px rgba(41, 54, 136, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .headerContainer {
   padding: 0 15px;
   margin: 0 auto;
-  max-width: 1440px;
+  max-width: 1410px;
   display: flex;
   align-items: center;
 }
@@ -16,16 +19,58 @@
   padding: 8px 0;
 }
 
-.navContainer{
+.navContainer {
   display: flex;
   gap: 30px;
 }
 
-.addressContainer{
+.navItem {
+  padding: 10px 0;
+}
+
+.navItemActive {
+  padding: 10px 0;
+  border-bottom: 2px solid black;
+}
+
+.navItemSale {
+  padding: 10px 0;
+  color: var(--nav);
+}
+
+.navItem:hover,
+.navItem:focus {
+  text-shadow: 2px 2px 12px rgba(41, 54, 136, 0.2);
+  color: var(--nav);
+}
+
+.addressContainer {
   margin-left: auto;
 }
 
-.addressList{
+.addressList {
   display: flex;
-  gap: 40px;
+  gap: 30px;
+}
+
+.addressItem {
+  font-style: normal;
+  font-size: 14px;
+}
+
+.adressLink {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.instaIcon {
+  fill: var(--nav);
+}
+
+.adressLink:hover,
+.adressLink:focus {
+  text-shadow: 2px 2px 12px rgba(41, 54, 136, 0.2);
+  color: var(--nav);
 }
