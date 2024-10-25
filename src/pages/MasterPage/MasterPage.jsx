@@ -3,11 +3,9 @@ import style from './MasterPage.module.css';
 
 const MasterPage = () => {
   return (
-    <main>
+    <main className={style.mainContainer}>
       <DocTitle>Master Class</DocTitle>
-      <div>
-        <h2>Master Class</h2>
-      </div>
+      <h2 className={style.title}>Master Class</h2>
     </main>
   );
 };

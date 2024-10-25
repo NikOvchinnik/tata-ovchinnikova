@@ -3,11 +3,9 @@ import style from './SalePage.module.css';
 
 const SalePage = () => {
   return (
-    <main>
+    <main className={style.mainContainer}>
       <DocTitle>Sale</DocTitle>
-      <div>
-        <h2>Sale</h2>
-      </div>
+      <h2 className={style.title}>Sale</h2>
     </main>
   );
 };

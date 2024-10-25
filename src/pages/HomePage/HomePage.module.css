@@ -3,3 +3,9 @@
   margin: 30px auto;
   max-width: 1410px;
 }
+
+.title {
+    margin-bottom: 15px;
+    font-size: 32px; 
+    font-weight: 700;
+}

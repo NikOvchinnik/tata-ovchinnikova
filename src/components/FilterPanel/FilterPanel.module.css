@@ -2,12 +2,6 @@
     margin-bottom: 30px;
 }
 
-.titleCatalog {
-    margin-bottom: 15px;
-    font-size: 32px; 
-    font-weight: 700;
-}
-
 .filterList {
     display: flex;
     gap: 20px;

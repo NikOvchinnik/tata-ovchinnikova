@@ -3,11 +3,9 @@ import style from './AboutPage.module.css';
 
 const AboutPage = () => {
   return (
-    <main>
+    <main className={style.mainContainer}>
       <DocTitle>About</DocTitle>
-      <div>
-        <h2>About Us</h2>
-      </div>
+      <h2 className={style.title}>About Us</h2>
     </main>
   );
 };

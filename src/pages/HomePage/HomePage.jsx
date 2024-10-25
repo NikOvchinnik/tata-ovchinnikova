@@ -7,7 +7,8 @@ const HomePage = () => {
   return (
     <main className={style.mainContainer}>
       <DocTitle>TataOvchinnikova</DocTitle>
-      <FilterPanel/>
+      <h1 className={style.title}>Tata Catalog</h1>
+      <FilterPanel />
       <Catalog />
     </main>
   );
