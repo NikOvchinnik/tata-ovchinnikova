@@ -1,8 +1,11 @@
+import { selectCards } from '../../redux/cards/selectors';
 import CatalogCard from '../CatalogCard/CatalogCard';
-import catalog from '../../catalog.json';
 import style from './Catalog.module.css';
+import { useSelector } from 'react-redux';
 
 const Catalog = () => {
+  const catalog = useSelector(selectCards);
+
   return (
     <section>
       <ul className={style.catalogList}>

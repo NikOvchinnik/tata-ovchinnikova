@@ -2,7 +2,7 @@ import axios from 'axios';
 import { Notify } from 'notiflix/build/notiflix-notify-aio.js';
 
 const apiClient = axios.create({
-  baseURL: 'https://66bdec8b74dfc195586e0c1d.mockapi.io',
+  baseURL: import.meta.env.VITE_BASE_URL,
 });
 
 const request = async (
