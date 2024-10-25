@@ -1,0 +1,14 @@
+.filterContainer{
+    margin-bottom: 20px;
+}
+
+.filterList {
+    display: flex;
+    gap: 20px;
+}
+
+.filterItem{
+    padding: 4px 8px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
