@@ -1,15 +1,15 @@
 import DocTitle from '../../components/DocTitle';
-import style from './MasterPage.module.css';
+import style from './SalePage.module.css';
 
-const MasterPage = () => {
+const SalePage = () => {
   return (
     <main>
-      <DocTitle>Master Class</DocTitle>
+      <DocTitle>Sale</DocTitle>
       <div>
-        <h2>Master Class</h2>
+        <h2>Sale</h2>
       </div>
     </main>
   );
 };
 
-export default MasterPage;
+export default SalePage; 

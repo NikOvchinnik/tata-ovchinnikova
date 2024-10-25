@@ -1,0 +1,51 @@
+.imgContainer {
+  width: 280px;
+  height: 373px;
+  position: relative;
+}
+
+.cardImg {
+  width: 280px; /* Залишаємо ширину зображення на 100%, щоб займати всю ширину контейнера */
+  height: 373px; /* Зберігаємо пропорції зображення */
+  border-radius: 10px;
+}
+
+.newContainer {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: var(--background);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.cardBtn {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--background);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.textContainer {
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sizeList {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sizeItem {
+  font-size: 10px;
+  padding: 1px 4px;
+  border: 1px solid #ccc;
+}

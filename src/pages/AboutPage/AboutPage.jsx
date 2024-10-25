@@ -1,5 +1,5 @@
 import DocTitle from '../../components/DocTitle';
-import style from './MasterPage.module.css';
+import style from './AboutPage.module.css';
 
 const AboutPage = () => {
   return (
