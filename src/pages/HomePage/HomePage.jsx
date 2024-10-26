@@ -5,10 +5,16 @@ import FilterPanel from '../../components/FilterPanel/FilterPanel';
 import style from './HomePage.module.css';
 import { useDispatch } from 'react-redux';
 import { fetchCards } from '../../redux/cards/operations';
+import { changeFilters } from '../../redux/filters/slice';
 
 const HomePage = () => {
   const dispatch = useDispatch();
-  
+      dispatch(
+        changeFilters({
+          search: '',
+          category: [],
+        })
+      );
   useEffect(() => {
     dispatch(fetchCards());
   }, [dispatch]);

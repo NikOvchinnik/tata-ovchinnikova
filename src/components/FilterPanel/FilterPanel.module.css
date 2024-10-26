@@ -1,16 +1,36 @@
-.filterContainer{
-    margin-bottom: 30px;
+.formContainer {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
 }
 
-.filterList {
-    display: flex;
-    gap: 20px;
+.categoryList {
+  display: flex;
+  gap: 20px;
 }
 
-.filterItem {
-    padding: 6px 12px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    color: #555; 
-    font-weight: 500;
+.categoryItem {
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  color: #555;
+  font-weight: 500;
+}
+
+.categoryInput {
+  appearance: none;
+}
+
+.searchContainer {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.searchInput {
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  color: #555;
+  font-weight: 500;
 }

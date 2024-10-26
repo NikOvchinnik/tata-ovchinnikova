@@ -1,9 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialFiltersState = {
-  location: '',
-  equipment: [],
-  type: '',
+  search: '',
+  category: 'Усі',
 };
 
 const filtersSlice = createSlice({
@@ -11,9 +10,8 @@ const filtersSlice = createSlice({
   initialState: initialFiltersState,
   reducers: {
     changeFilters(state, action) {
-      state.location = action.payload.location;
-      state.equipment = action.payload.equipment;
-      state.type = action.payload.type;
+      state.search = action.payload.search;
+      state.category = action.payload.category;
     },
   },
 });
