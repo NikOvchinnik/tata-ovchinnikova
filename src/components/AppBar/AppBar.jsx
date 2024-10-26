@@ -6,7 +6,7 @@ const AppBar = () => {
   return (
     <header className={style.header}>
       <div className={style.headerContainer}>
-        <a href="/">
+        <NavLink to="/">
           <img
             src="/public/logo.jpg"
             alt="logo"
@@ -14,7 +14,7 @@ const AppBar = () => {
             height="18"
             className={style.headerLogo}
           />
-        </a>
+        </NavLink>
         <nav className={style.navContainer}>
           <NavLink
             to="/"
