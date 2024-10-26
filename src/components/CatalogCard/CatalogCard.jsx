@@ -16,6 +16,11 @@ const CatalogCard = ({ card }) => {
             <p>NEW</p>
           </div>
         )}
+        {/* {card.isNew && (
+          <div className={style.stockContainer}>
+            <p>в наявності</p>
+          </div>
+        )} */}
       </div>
       <div className={style.textContainer}>
         <h3 className={style.titleCard}>{card.title}</h3>
@@ -26,7 +31,16 @@ const CatalogCard = ({ card }) => {
             </li>
           ))}
         </ul>
-        <p className={style.priceCard}>{card.price} UAH</p>
+        <div className={style.priceCard}>
+          {card.isSale ? (
+            <>
+              <p className={style.priceText}>{card.salePrice} UAH</p>
+              <p className={style.salePriceText}>{card.price} UAH</p>
+            </>
+          ) : (
+            <p className={style.priceText}>{card.price} UAH</p>
+          )}
+        </div>
         <button className={style.btnBuy}>Замовити</button>
       </div>
     </li>
