@@ -2,29 +2,25 @@ import { useForm } from 'react-hook-form';
 import style from './FilterPanel.module.css';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
-import { useEffect } from 'react';
+import { useEffect, useId } from 'react';
 import { changeFilters } from '../../redux/filters/slice';
 import { useDispatch } from 'react-redux';
 
 const schemaYup = Yup.object().shape({
   search: Yup.string(),
-  category: Yup.string().oneOf([
-    'Нові',
-    'Жіночий одяг',
-    'Чоловічий одяг',
-    'Головні убори',
-  ]),
+  category: Yup.string(),
 });
+
+const defaultValues = {
+  search: '',
+  category: 'Усі',
+};
 
 const FilterPanel = () => {
   const dispatch = useDispatch();
+  const idSearch = useId();
 
-  const defaultValues = {
-    search: '',
-    category: 'Усі',
-  };
-
-  const { register, watch } = useForm({
+  const { register, handleSubmit, watch } = useForm({
     defaultValues: defaultValues,
     resolver: yupResolver(schemaYup),
   });
@@ -41,12 +37,15 @@ const FilterPanel = () => {
     );
   }, [searchValue, categoryValue, dispatch]);
 
+  const onSubmit = () => {
+  };
+
   return (
-    <form className={style.formContainer}>
+    <form onSubmit={handleSubmit(onSubmit)} className={style.formContainer}>
       <div className={style.categoryContainer}>
         <ul className={style.categoryList}>
           <li className={style.categoryItem}>
-            <label>
+            <label className={style.categoryLabel}>
               <input
                 className={style.categoryInput}
                 type="radio"
@@ -57,7 +56,7 @@ const FilterPanel = () => {
             </label>
           </li>
           <li className={style.categoryItem}>
-            <label>
+            <label className={style.categoryLabel}>
               <input
                 className={style.categoryInput}
                 type="radio"
@@ -68,7 +67,7 @@ const FilterPanel = () => {
             </label>
           </li>
           <li className={style.categoryItem}>
-            <label>
+            <label className={style.categoryLabel}>
               <input
                 className={style.categoryInput}
                 type="radio"
@@ -79,7 +78,7 @@ const FilterPanel = () => {
             </label>
           </li>
           <li className={style.categoryItem}>
-            <label>
+            <label className={style.categoryLabel}>
               <input
                 className={style.categoryInput}
                 type="radio"
@@ -90,7 +89,7 @@ const FilterPanel = () => {
             </label>
           </li>
           <li className={style.categoryItem}>
-            <label>
+            <label className={style.categoryLabel}>
               <input
                 className={style.categoryInput}
                 type="radio"
@@ -101,7 +100,7 @@ const FilterPanel = () => {
             </label>
           </li>
           <li className={style.categoryItem}>
-            <label>
+            <label className={style.categoryLabel}>
               <input
                 className={style.categoryInput}
                 type="radio"
@@ -114,9 +113,12 @@ const FilterPanel = () => {
         </ul>
       </div>
       <div className={style.searchContainer}>
-        <label>Пошук</label>
+        <label htmlFor={idSearch} className={style.searchLabel}>
+          Пошук
+        </label>
         <input
           className={style.searchInput}
+          id={idSearch}
           type="text"
           placeholder="назва моделі"
           {...register('search')}

@@ -9,12 +9,26 @@
   gap: 20px;
 }
 
-.categoryItem {
+.categoryLabel {
+  display: flex;
   padding: 6px 12px;
   border: 1px solid #ccc;
   border-radius: 8px;
   color: #555;
   font-weight: 500;
+  cursor: pointer;
+  transition: border 0.3s ease, color 0.3s ease;
+}
+
+.categoryLabel:hover,
+.categoryLabel:focus {
+  border: 1px solid var(--nav);
+  color: var(--nav);
+}
+
+.categoryLabel:has(.categoryInput:checked) {
+  border: 1px solid var(--nav);
+  color: var(--nav);
 }
 
 .categoryInput {
@@ -33,4 +47,17 @@
   border-radius: 8px;
   color: #555;
   font-weight: 500;
+  transition: border 0.3s ease, color 0.3s ease;
+}
+
+.searchLabel {
+  color: #555;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.searchInput:hover,
+.searchInput:focus {
+  border: 1px solid var(--nav);
+  color: var(--nav);
 }

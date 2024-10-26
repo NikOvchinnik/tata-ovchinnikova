@@ -1,6 +1,5 @@
 .catalogList {
     display: flex;
-    gap: 30px;
+    gap: 33px;
     flex-wrap: wrap;
-    justify-content: space-between;
 }

@@ -7,8 +7,8 @@ const CatalogCard = ({ card }) => {
         <img
           src={card.images}
           alt={card.title}
-          width="280"
-          height="373"
+          width="320"
+          height="426"
           className={style.cardImg}
         />
         {card.isNew && (

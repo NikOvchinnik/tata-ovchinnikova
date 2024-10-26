@@ -5,7 +5,7 @@ export const selectCards = state => state.cards.cards;
 export const selectLoading = state => state.cards.loading;
 export const selectError = state => state.cards.error;
 
-export const selectFilteredCampers = createSelector(
+export const selectFilteredCards = createSelector(
   [selectCards, selectFilters],
   (cards, filters) => {
     const filteredCards = cards.filter(card => {
