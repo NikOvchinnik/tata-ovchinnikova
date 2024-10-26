@@ -7,10 +7,10 @@ import { useSelector } from 'react-redux';
 const Catalog = () => {
   const catalog = useSelector(selectFilteredCards);
 
-  const [visibleCount, setVisibleCount] = useState(8);
+  const [visibleCount, setVisibleCount] = useState(16);
 
   const handleLoadMore = () => {
-    setVisibleCount(prevCount => prevCount + 8);
+    setVisibleCount(prevCount => prevCount + 16);
   };
 
   const visibleCards = catalog.slice(0, visibleCount);
@@ -30,7 +30,7 @@ const Catalog = () => {
               onClick={handleLoadMore}
               type="button"
             >
-              Load more
+              Показати ще
             </button>
           )}
         </>
