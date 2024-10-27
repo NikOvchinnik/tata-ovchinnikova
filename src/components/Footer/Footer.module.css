@@ -1,0 +1,17 @@
+.footer {
+  background-color: black;
+  box-shadow: 2px 2px 12px rgba(41, 54, 136, 0.1);
+}
+
+.footerContainer {
+  padding: 10px 15px;
+  margin: 0 auto;
+  max-width: 1410px;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+}
+
+.footerIcon{
+  fill: #fff;
+}

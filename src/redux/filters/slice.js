@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialFiltersState = {
   search: '',
-  category: 'Усі',
+  category: '',
 };
 
 const filtersSlice = createSlice({

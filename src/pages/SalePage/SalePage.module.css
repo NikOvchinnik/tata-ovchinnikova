@@ -2,6 +2,7 @@
   padding: 0 15px;
   margin: 30px auto;
   max-width: 1410px;
+  min-height: 100vh;
 }
 
 .title {

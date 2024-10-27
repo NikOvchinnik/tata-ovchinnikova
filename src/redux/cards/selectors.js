@@ -9,12 +9,11 @@ export const selectFilteredCards = createSelector(
   [selectCards, selectFilters],
   (cards, filters) => {
     const filteredCards = cards.filter(card => {
-      // Фільтрування по назві
+
       const matchesTitle = card.title
         .toLowerCase()
         .includes(filters.search.trim().toLowerCase());
 
-      // Фільтрування по категорії
       const matchesCategory = (() => {
         if (filters.category === 'Усі') return true;
         if (filters.category === 'Нові') return card.isNew === true;
