@@ -1,6 +1,18 @@
+import { useState } from 'react';
+import ModalWindow from '../ModalWindow/ModalWindow';
 import style from './CatalogCard.module.css';
 
 const CatalogCard = ({ card }) => {
+  const [isModalOpen, setModalIsOpen] = useState(false);
+
+  const openModal = () => {
+    setModalIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalIsOpen(false);
+  };
+
   return (
     <li className={style.cardContainer}>
       <div className={style.imgContainer}>
@@ -41,8 +53,15 @@ const CatalogCard = ({ card }) => {
             <p className={style.priceText}>{card.price} UAH</p>
           )}
         </div>
-        <button className={style.btnBuy}>Замовити</button>
+        <button onClick={openModal} className={style.btnBuy} type="button">
+          Замовити
+        </button>
       </div>
+      <ModalWindow
+        isModalOpen={isModalOpen}
+        onCloseModal={closeModal}
+        card={card}
+      />
     </li>
   );
 };

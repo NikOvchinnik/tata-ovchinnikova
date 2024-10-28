@@ -1,0 +1,43 @@
+.modalWindow {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modalContainer {
+  position: relative;
+  background-color: var(--background);
+  border-radius: 5px;
+  padding: 40px;
+  max-height: 85vh;
+  overflow-y: auto;
+}
+
+/* .modalContainer::-webkit-scrollbar {
+  width: 6px;
+}
+
+.modalContainer::-webkit-scrollbar-track {
+  background-color: inherit;
+  border-radius: 10px;
+}
+
+.modalContainer::-webkit-scrollbar-thumb {
+  background-color: #dfdddd;
+  border-radius: 10px;
+}
+
+.modalContainer::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+} */
+
+.btnClose {
+  width: 32px;
+  height: 32px;
+  background-color: inherit;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  fill: var(--main-text);
+}
