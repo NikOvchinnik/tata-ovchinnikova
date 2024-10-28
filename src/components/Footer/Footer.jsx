@@ -5,54 +5,79 @@ const Footer = () => {
   return (
     <footer className={style.footer}>
       <div className={style.footerContainer}>
-        <div>
-          <p>Tata Ovchinnikova</p>
-          <ul>
+        <div className={style.adressContainer}>
+          <p className={style.logoText}>TATA OVCHINNIKOVA</p>
+          <ul className={style.adressList}>
             <li>
-              <a href="https://www.instagram.com/_tata_ovchinnikova/">
+              <a
+                className={style.adressLink}
+                href="https://www.instagram.com/_tata_ovchinnikova/"
+              >
                 <Icon
                   id="insta"
-                  width="15"
-                  height="15"
+                  width="20"
+                  height="20"
                   className={style.footerIcon}
                 />
               </a>
             </li>
             <li>
-              <a href="https://t.me/tata_ovchinnikova">
+              <a
+                className={style.adressLink}
+                href="https://t.me/tata_ovchinnikova"
+              >
                 <Icon
                   id="telegram"
-                  width="15"
-                  height="15"
+                  width="20"
+                  height="20"
                   className={style.footerIcon}
                 />
               </a>
             </li>
           </ul>
-          <ul>
+          <ul className={style.adressList}>
             <li>
-              <a href="mailto:tata@gmail.com<">tata@gmail.com</a>
+              <a className={style.adressLink} href="mailto:tata@gmail.com<">
+                tata@gmail.com
+              </a>
             </li>
             <li>
-              <a href="tel:+380502803612">+380502803612</a>
+              <a className={style.adressLink} href="tel:+380502803612">
+                +380502803612
+              </a>
             </li>
           </ul>
         </div>
         <div>
-          <ul>
-            <li>Оплата і доставка</li>
-            <li>Політика конфіденційності</li>
-            <li>Договір публічної оферти</li>
+          <ul className={style.privacyList}>
+            <li>
+              <a className={style.privacyLink} href="">
+                Оплата і доставка
+              </a>
+            </li>
+            <li>
+              <a className={style.privacyLink} href="">
+                Політика конфіденційності
+              </a>
+            </li>
+            <li>
+              <a className={style.privacyLink} href="">
+                Договір публічної оферти
+              </a>
+            </li>
           </ul>
         </div>
-        <div>
+        <div className={style.logoFooterContainer}>
           <img
+            className={style.logoFooter}
             src="/public/img/footer.jpg"
             alt="footer logo"
-            width="120"
-            height="120"
+            width="90"
+            height="67"
           />
-          <p>Розробник ... 2024@Усі права захищені</p>
+          <p className={style.developerText}>
+            @2024 NikOvchinnik Усі права захищені
+          </p>
         </div>
       </div>
     </footer>
