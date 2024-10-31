@@ -1,0 +1,73 @@
+.cardContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.listContainer {
+  display: flex;
+  gap: 8px;
+}
+
+.titleListContainer {
+  font-weight: 600;
+}
+
+.sizeList {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sizeItem {
+  font-size: 8px;
+  padding: 2px 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.colorListContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.colorText {
+  color: #848484;
+  font-size: 10px;
+}
+
+.priceCard {
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.priceText {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--nav);
+}
+
+.salePriceText {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--title);
+  text-decoration: line-through;
+}
+
+.btnBuy {
+  background-color: var(--background);
+  border: 1px solid #ccc;
+  padding: 6px 100px;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+.btnBuy:hover,
+.btnBuy:focus {
+  border: 1px solid var(--nav);
+  color: var(--nav);
+}

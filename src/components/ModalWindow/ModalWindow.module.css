@@ -22,24 +22,38 @@
   top: 20px;
   right: 20px;
   fill: var(--main-text);
+  transition: fill 0.3s ease;
+}
+
+.btnClose:hover {
+ fill: var(--nav);
 }
 
 .cardContainer {
   display: flex;
   flex-direction: row;
-  gap: 40px;
+  gap: 20px;
 }
 
 .imgContainer {
   min-width: 480px;
   height: 640px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   position: relative;
+  transition: transform 0.8s ease;
+}
+
+.imgContainer:hover .cardImg {
+  transform: scale(1.1);
 }
 
 .cardImg {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.8s ease;
 }
 
 .newContainer {
@@ -50,5 +64,18 @@
   padding: 4px 8px;
   border-radius: 4px;
   font-weight: bold;
+  font-size: 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 360px;
+}
+
+.cardTitle {
+  font-size: 24px;
+  line-height: 1.2;
 }
