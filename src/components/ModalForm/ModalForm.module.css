@@ -1,0 +1,14 @@
+.btnBack {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background-color: inherit;
+    margin-bottom: 10px;
+    color: #848484;
+    fill: #848484;
+}
+
+.btnBack:hover {
+    color: var(--main-text);
+    fill: var(--main-text);
+}
