@@ -70,7 +70,7 @@ const Footer = () => {
         <div className={style.logoFooterContainer}>
           <img
             className={style.logoFooter}
-            src="/public/img/footer.jpg"
+            src="/img/footer.jpg"
             alt="footer logo"
             width="90"
             height="67"
