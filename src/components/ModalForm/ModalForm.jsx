@@ -41,6 +41,7 @@ const ModalForm = ({ card, closeModalForm }) => {
   const publickId = useId();
 
   const onSubmit = data => {
+    console.log(card.title);
     console.log(data);
   };
 
