@@ -8,7 +8,7 @@ const AppBar = () => {
       <div className={style.headerContainer}>
         <NavLink to="/">
           <img
-            src="/public/logo.jpg"
+            src="/logo.jpg"
             alt="logo"
             width="150"
             height="18"
