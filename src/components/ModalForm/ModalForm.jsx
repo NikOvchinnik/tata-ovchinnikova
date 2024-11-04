@@ -8,9 +8,9 @@ import { useId } from 'react';
 const schemaYup = Yup.object().shape({
   name: Yup.string().required("*напишіть ваше ім'я"),
   phone: Yup.string().required("*напишіть ваш номер телефону"),
-  messenger: Yup.string().required("*оберіть мессенджер для звязку"),
+  messenger: Yup.string().required("*оберіть месенджер для звязку"),
   comment: Yup.string(),
-  publick: Yup.boolean().oneOf(
+  privacy: Yup.boolean().oneOf(
     [true],
     '*потрібно прийняти політику конфіденційності'
   ),
@@ -21,10 +21,10 @@ const defaultValues = {
   phone: '',
   messenger: 'telegram',
   comment: '',
-  publick: false,
+  privacy: false,
 };
 
-const ModalForm = ({ card, closeModalForm }) => {
+const ModalForm = ({ card, closeModalForm, closeModalWindow }) => {
   const {
     register,
     handleSubmit,
@@ -43,6 +43,8 @@ const ModalForm = ({ card, closeModalForm }) => {
   const onSubmit = data => {
     console.log(card.title);
     console.log(data);
+    closeModalForm();
+    closeModalWindow();
   };
 
   return (
@@ -115,7 +117,7 @@ const ModalForm = ({ card, closeModalForm }) => {
               className={style.publickInput}
               id={publickId}
               type="checkbox"
-              {...register('publick')}
+              {...register('privacy')}
             />
             ознайомлений з Політикою конфіденційності і Публічною офертою
           </label>

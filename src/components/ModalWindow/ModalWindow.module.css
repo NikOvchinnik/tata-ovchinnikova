@@ -9,7 +9,7 @@
   position: relative;
   background-color: var(--background);
   border-radius: 5px;
-  padding: 40px;
+  padding: 40px 20px 40px 40px;
   max-height: 85vh;
   overflow-y: hidden;
 }
@@ -19,7 +19,7 @@
   height: 32px;
   background-color: inherit;
   position: absolute;
-  top: 20px;
+  top: 15px;
   right: 20px;
   fill: var(--main-text);
   transition: fill 0.3s ease;
@@ -36,7 +36,7 @@
 }
 
 .imgContainer {
-  min-width: 480px;
+  width: 480px;
   height: 640px;
   border-radius: 20px;
   overflow: hidden;
@@ -67,6 +67,7 @@
   flex-direction: column;
   gap: 15px;
   width: 360px;
+  padding-right: 20px;
 }
 
 .cardTitle {

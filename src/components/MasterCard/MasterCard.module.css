@@ -37,11 +37,11 @@
 }
 
 .textCard{
-  margin-bottom: 2px;
+  margin-bottom: 6px;
   font-size: 14px;
   font-weight: 700;
   font-family: 'Poppins', sans-serif;
-  color: #a52a2a;
+  color: #555555c6;
   text-align: center;
   line-height: 1.2;
 }
@@ -52,7 +52,7 @@
 
 .titleCard {
   font-size: 18px;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
   text-align: center;
   line-height: 1.2;
 }

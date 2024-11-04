@@ -37,9 +37,7 @@ const ModalWindow = ({ isModalOpen, onCloseModal, card }) => {
         <button className={style.btnClose} onClick={onCloseModal} type="button">
           <Icon id="x" width="20" height="20" />
         </button>
-        <Scrollbars
-          style={{ width: 860, height: "85vh" }}
-        >
+        <Scrollbars style={{ width: 860, height: '75vh' }}>
           <div className={style.cardContainer}>
             <div className={style.imgContainer}>
               <img
@@ -56,7 +54,11 @@ const ModalWindow = ({ isModalOpen, onCloseModal, card }) => {
             <div className={style.cardContent}>
               <h3 className={style.cardTitle}>{card.title}</h3>
               {isModalFormOpen ? (
-                <ModalForm card={card} closeModalForm={closeModalForm} />
+                <ModalForm
+                  card={card}
+                  closeModalForm={closeModalForm}
+                  closeModalWindow={onCloseModal}
+                />
               ) : (
                 <ModalCard card={card} openModalForm={openModalForm} />
               )}
