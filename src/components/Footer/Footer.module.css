@@ -9,7 +9,7 @@
   max-width: 1410px;
   display: flex;
   justify-content: space-between;
-  color: #ccc;
+  color: var(--border);
 }
 
 .adressContainer {
@@ -30,6 +30,7 @@
 
 .adressLink {
   font-size: 14px;
+  transition: color 0.3s ease;
 }
 
 .adressLink:hover,
@@ -38,7 +39,8 @@
 }
 
 .footerIcon {
-  fill: #ccc;
+  fill: var(--border);
+  transition: fill 0.3s ease;
 }
 
 .footerIcon:hover,
@@ -55,6 +57,7 @@
 
 .privacyLink {
   font-size: 14px;
+  transition: color 0.3s ease;
 }
 
 .privacyLink:hover,
@@ -74,4 +77,6 @@
 
 .developerText {
   font-size: 14px;
+  transition: color 0.3s ease;
 }
+

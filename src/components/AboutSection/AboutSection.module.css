@@ -13,6 +13,7 @@
 .title {
     font-size: 24px; 
     font-weight: 800;
+    margin-bottom: 20px;
 }
 
 .textAbout {
@@ -21,7 +22,7 @@
 
 .photoContainer {
   width: 664px;
-  height: 700px;
+  height: 664px;
   border-radius: 30px;
   background-image: url(/public/img/about.JPG);
   background-size: cover;

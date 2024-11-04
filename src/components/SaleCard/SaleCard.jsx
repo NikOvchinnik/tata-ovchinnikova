@@ -28,6 +28,9 @@ const SaleCard = ({ card }) => {
             <p>NEW</p>
           </div>
         )}
+      </div>
+      <div className={style.textContainer}>
+        <h3 className={style.titleCard}>{card.title}</h3>
         {card.isInStock && (
           <div className={style.stockContainer}>
             <p>в наявності</p>
@@ -40,9 +43,6 @@ const SaleCard = ({ card }) => {
             </ul>
           </div>
         )}
-      </div>
-      <div className={style.textContainer}>
-        <h3 className={style.titleCard}>{card.title}</h3>
         <div className={style.priceCard}>
           {card.isSale ? (
             <>

@@ -31,15 +31,13 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  position: absolute; 
-  bottom: 10px; 
-  left: 10px; 
-  background-color: var(--nav); 
-  color: white; 
-  padding: 4px 8px; 
-  border-radius: 4px; 
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
-  font-weight: 600; 
+  background-color: var(--nav);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  font-size: 12px;
+  margin-bottom: 8px;
 }
 
 .sizeList {
@@ -50,9 +48,9 @@
 }
 
 .sizeItem {
-  font-size: 10px;
-  padding: 0 4px;
-  border: 2px solid #ccc;
+  font-size: 8px;
+  padding: 1px 4px;
+  border: 1px solid var(--border);
   border-radius: 4px;
 }
 
@@ -80,9 +78,9 @@
 }
 
 .priceText {
-  font-size: 16px; 
-  font-weight: bold; 
-  color: var(--nav); 
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--nav);
 }
 
 .salePriceText {
@@ -94,7 +92,7 @@
 
 .btnBuy {
   background-color: var(--background);
-  border: 1px solid #ccc;
+  border: 1px solid var(--border);
   padding: 6px 100px;
   font-weight: bold;
   border-radius: 4px;

@@ -1,6 +1,6 @@
 .mainContainer {
   padding: 0 15px;
-  margin: 30px auto;
+  margin: 15px auto 30px auto;
   max-width: 1410px;
   min-height: 100vh;
 }
@@ -13,5 +13,5 @@
 .textSale {
   color: var(--secondary-text);
   font-size: 14px;
-  margin-bottom: 35px;
+  margin-bottom: 25px;
 }

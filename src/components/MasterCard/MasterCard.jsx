@@ -30,10 +30,10 @@ const MasterCard = ({ card }) => {
         )}
       </div>
       <div className={style.textContainer}>
+        <h3 className={style.titleCard}>{card.title}</h3>
         <p className={style.textCard}>
           Майстер<span className={style.spanCard}>-</span>клас
         </p>
-        <h3 className={style.titleCard}>{card.title}</h3>
         <div className={style.priceCard}>
           {card.isSale ? (
             <>
