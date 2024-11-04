@@ -19,7 +19,14 @@ const MasterPage = () => {
   return (
     <main className={style.mainContainer}>
       <DocTitle>Master Class</DocTitle>
-      <h2 className={style.title}>Master Class</h2>
+      <h2 className={style.titleMaster}>Master Class</h2>
+      <p className={style.textMaster}>
+        Майстер-клас — це детальний текстовий посібник у форматі PDF, який ви
+        легко можете відкрити на будь-якому пристрої. В посібнику міститься
+        покроковий опис кожного етапу в'язання, а також відео з основними
+        техніками та процесами. Майстер-клас ідеально підходить для тих, хто
+        прагне створити щось унікальне своїми руками або на подарунок близьким.
+      </p>
       {loading ? (
         <Loader />
       ) : (

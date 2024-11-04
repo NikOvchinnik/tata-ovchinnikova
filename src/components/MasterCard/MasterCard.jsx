@@ -28,21 +28,12 @@ const MasterCard = ({ card }) => {
             <p>NEW</p>
           </div>
         )}
-        {/* {card.isNew && (
-          <div className={style.stockContainer}>
-            <p>в наявності</p>
-          </div>
-        )} */}
       </div>
       <div className={style.textContainer}>
+        <p className={style.textCard}>
+          Майстер<span className={style.spanCard}>-</span>клас
+        </p>
         <h3 className={style.titleCard}>{card.title}</h3>
-        <ul className={style.sizeList}>
-          {card.sizes.map(size => (
-            <li key={size} className={style.sizeItem}>
-              {size}
-            </li>
-          ))}
-        </ul>
         <div className={style.priceCard}>
           {card.isSale ? (
             <>

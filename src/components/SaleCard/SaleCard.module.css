@@ -29,6 +29,7 @@
 
 .stockContainer {
   display: flex;
+  align-items: center;
   gap: 8px;
   position: absolute; 
   bottom: 10px; 
@@ -38,7 +39,21 @@
   padding: 4px 8px; 
   border-radius: 4px; 
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
-  font-weight: bold; 
+  font-weight: 600; 
+}
+
+.sizeList {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.sizeItem {
+  font-size: 10px;
+  padding: 0 4px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
 }
 
 .textContainer {
@@ -54,21 +69,6 @@
   margin-bottom: 4px;
   text-align: center;
   line-height: 1.2;
-}
-
-.sizeList {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  margin-bottom: 8px;
-}
-
-.sizeItem {
-  font-size: 8px;
-  padding: 2px 6px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
 }
 
 .priceCard {

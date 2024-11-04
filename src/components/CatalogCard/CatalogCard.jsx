@@ -28,11 +28,6 @@ const CatalogCard = ({ card }) => {
             <p>NEW</p>
           </div>
         )}
-        {/* {card.isNew && (
-          <div className={style.stockContainer}>
-            <p>в наявності</p>
-          </div>
-        )} */}
       </div>
       <div className={style.textContainer}>
         <h3 className={style.titleCard}>{card.title}</h3>

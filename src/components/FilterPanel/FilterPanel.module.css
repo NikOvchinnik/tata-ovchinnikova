@@ -1,5 +1,5 @@
 .formContainer {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   display: flex;
   justify-content: space-between;
 }
@@ -12,9 +12,9 @@
 .categoryLabel {
   display: flex;
   padding: 6px 12px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--border);
   border-radius: 8px;
-  color: #555;
+  color: var(--secondary-text);
   font-weight: 500;
   cursor: pointer;
   transition: border 0.3s ease, color 0.3s ease;
@@ -43,15 +43,15 @@
 
 .searchInput {
   padding: 6px 12px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--border);
   border-radius: 8px;
-  color: #555;
+  color: var(--secondary-text);
   font-weight: 500;
   transition: border 0.3s ease, color 0.3s ease;
 }
 
 .searchLabel {
-  color: #555;
+  color: var(--secondary-text);
   font-weight: 500;
   cursor: pointer;
 }

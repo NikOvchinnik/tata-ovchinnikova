@@ -1,8 +1,10 @@
 :root {
   --main-text: #000000;
+  --secondary-text: #555;
   --title: #333;
   --background: #fff;
-  --nav: brown;
+  --border: #ccc;
+  --nav: #a52a2a;
 }
 
 body {

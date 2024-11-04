@@ -32,7 +32,7 @@ const SaleCard = ({ card }) => {
           <div className={style.stockContainer}>
             <p>в наявності</p>
             <ul className={style.sizeList}>
-              {card.sizes.map(size => (
+              {card.sizesInStock.map(size => (
                 <li key={size} className={style.sizeItem}>
                   {size}
                 </li>
@@ -43,13 +43,6 @@ const SaleCard = ({ card }) => {
       </div>
       <div className={style.textContainer}>
         <h3 className={style.titleCard}>{card.title}</h3>
-        <ul className={style.sizeList}>
-          {card.sizes.map(size => (
-            <li key={size} className={style.sizeItem}>
-              {size}
-            </li>
-          ))}
-        </ul>
         <div className={style.priceCard}>
           {card.isSale ? (
             <>

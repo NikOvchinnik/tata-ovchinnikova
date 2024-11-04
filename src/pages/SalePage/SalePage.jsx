@@ -19,7 +19,8 @@ const SalePage = () => {
   return (
     <main className={style.mainContainer}>
       <DocTitle>Sale</DocTitle>
-      <h2 className={style.title}>Sale</h2>
+      <h2 className={style.titleSale}>Наявність</h2>
+      <p className={style.textSale}>*вироби у наявності готові до відправки і можуть бути у вас вже через 3-7 днів</p>
       {loading ? (
         <Loader />
       ) : (

@@ -1,7 +1,6 @@
 .aboutSection {
   display: flex;
   gap: 32px;
-  justify-content: space-between;
 }
 
 .textContainer {
@@ -12,8 +11,7 @@
 }
 
 .title {
-    margin-bottom: 15px;
-    font-size: 32px; 
+    font-size: 24px; 
     font-weight: 800;
 }
 

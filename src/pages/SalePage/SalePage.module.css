@@ -5,8 +5,13 @@
   min-height: 100vh;
 }
 
-.title {
-    margin-bottom: 15px;
-    font-size: 32px; 
-    font-weight: 700;
+.titleSale{
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.textSale {
+  color: var(--secondary-text);
+  font-size: 14px;
+  margin-bottom: 35px;
 }
