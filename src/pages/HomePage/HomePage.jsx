@@ -6,7 +6,8 @@ import style from './HomePage.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchCards } from '../../redux/cards/operations';
 import Loader from '../../components/Loader/Loader';
-import { selectLoading } from '../../redux/cards/selectors';
+import { selectFilteredCards, selectLoading } from '../../redux/cards/selectors';
+import CatalogCard from '../../components/CatalogCard/CatalogCard';
 
 const HomePage = () => {
   const dispatch = useDispatch();
@@ -24,7 +25,10 @@ const HomePage = () => {
       {loading ? (
         <Loader />
       ) : (
-      <Catalog />
+        <Catalog
+          selector={selectFilteredCards}
+          cardComponent={CatalogCard}
+        />
       )}
     </main>
   );

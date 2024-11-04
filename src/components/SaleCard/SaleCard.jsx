@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import ModalWindow from '../ModalWindow/ModalWindow';
-import style from './CatalogSaleCard.module.css';
+import style from './SaleCard.module.css';
 
-const CatalogSaleCard = ({ card }) => {
+const SaleCard = ({ card }) => {
   const [isModalOpen, setModalIsOpen] = useState(false);
 
   const openModal = () => {
@@ -73,4 +73,4 @@ const CatalogSaleCard = ({ card }) => {
   );
 };
 
-export default CatalogSaleCard;
+export default SaleCard;

@@ -1,11 +1,9 @@
 import { useState } from 'react';
-import { selectFilteredCards } from '../../redux/cards/selectors';
-import CatalogCard from '../CatalogCard/CatalogCard';
 import style from './Catalog.module.css';
 import { useSelector } from 'react-redux';
 
-const Catalog = () => {
-  const catalog = useSelector(selectFilteredCards);
+const Catalog = ({ selector, cardComponent: CardComponent }) => {
+  const catalog = useSelector(selector);
 
   const [visibleCount, setVisibleCount] = useState(16);
 
@@ -21,7 +19,7 @@ const Catalog = () => {
         <>
           <ul className={style.catalogList}>
             {visibleCards.map(card => (
-              <CatalogCard key={card.id} card={card} />
+              <CardComponent key={card.id} card={card} />
             ))}
           </ul>
           {visibleCount < catalog.length && (

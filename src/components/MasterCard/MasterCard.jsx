@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import ModalWindow from '../ModalWindow/ModalWindow';
-import style from './CatalogMasterCard.module.css';
+import style from './MasterCard.module.css';
 
-const CatalogMasterCard = ({ card }) => {
+const MasterCard = ({ card }) => {
   const [isModalOpen, setModalIsOpen] = useState(false);
 
   const openModal = () => {
@@ -66,4 +66,4 @@ const CatalogMasterCard = ({ card }) => {
   );
 };
 
-export default CatalogMasterCard;
+export default MasterCard;

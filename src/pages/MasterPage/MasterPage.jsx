@@ -3,9 +3,10 @@ import style from './MasterPage.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchCards } from '../../redux/cards/operations';
 import Loader from '../../components/Loader/Loader';
-import { selectLoading } from '../../redux/cards/selectors';
+import { selectLoading, selectMasterCards } from '../../redux/cards/selectors';
 import { useEffect } from 'react';
-import CatalogMaster from '../../components/CatalogMaster/CatalogMaster';
+import Catalog from '../../components/Catalog/Catalog';
+import MasterCard from '../../components/MasterCard/MasterCard';
 
 const MasterPage = () => {
   const dispatch = useDispatch();
@@ -19,7 +20,11 @@ const MasterPage = () => {
     <main className={style.mainContainer}>
       <DocTitle>Master Class</DocTitle>
       <h2 className={style.title}>Master Class</h2>
-      {loading ? <Loader /> : <CatalogMaster />}
+      {loading ? (
+        <Loader />
+      ) : (
+        <Catalog selector={selectMasterCards} cardComponent={MasterCard} />
+      )}
     </main>
   );
 };
