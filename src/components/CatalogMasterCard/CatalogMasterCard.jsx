@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import ModalWindow from '../ModalWindow/ModalWindow';
-import style from './CatalogSaleCard.module.css';
+import style from './CatalogMasterCard.module.css';
 
-const CatalogSaleCard = ({ card }) => {
+const CatalogMasterCard = ({ card }) => {
   const [isModalOpen, setModalIsOpen] = useState(false);
 
   const openModal = () => {
@@ -28,18 +28,11 @@ const CatalogSaleCard = ({ card }) => {
             <p>NEW</p>
           </div>
         )}
-        {card.isInStock && (
+        {/* {card.isNew && (
           <div className={style.stockContainer}>
             <p>в наявності</p>
-            <ul className={style.sizeList}>
-              {card.sizes.map(size => (
-                <li key={size} className={style.sizeItem}>
-                  {size}
-                </li>
-              ))}
-            </ul>
           </div>
-        )}
+        )} */}
       </div>
       <div className={style.textContainer}>
         <h3 className={style.titleCard}>{card.title}</h3>
@@ -73,4 +66,4 @@ const CatalogSaleCard = ({ card }) => {
   );
 };
 
-export default CatalogSaleCard;
+export default CatalogMasterCard;

@@ -1,0 +1,36 @@
+.aboutSection {
+  display: flex;
+  gap: 32px;
+  justify-content: space-between;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 664px;
+}
+
+.title {
+    margin-bottom: 15px;
+    font-size: 32px; 
+    font-weight: 800;
+}
+
+.textAbout {
+  font-size: 18px;
+}
+
+.photoContainer {
+  width: 664px;
+  height: 700px;
+  border-radius: 30px;
+  background-image: url(/public/img/about.JPG);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+
+
+

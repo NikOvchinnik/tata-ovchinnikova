@@ -28,7 +28,7 @@ export const selectFilteredCards = createSelector(
 );
 
 export const selectSaleCards = createSelector([selectCards], cards =>
-  cards.filter(card => card.isSale === true)
+  cards.filter(card => card.isInStock === true)
 );
 
 export const selectMasterCards = createSelector([selectCards], cards =>

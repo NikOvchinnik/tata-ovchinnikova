@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { selectMasterCards } from '../../redux/cards/selectors';
-import CatalogCard from '../CatalogCard/CatalogCard';
 import style from './CatalogMaster.module.css';
 import { useSelector } from 'react-redux';
+import CatalogMasterCard from '../CatalogMasterCard/CatalogMasterCard';
 
 const CatalogMaster = () => {
   const catalogMaster = useSelector(selectMasterCards);
@@ -21,7 +21,7 @@ const CatalogMaster = () => {
         <>
           <ul className={style.catalogList}>
             {visibleCards.map(card => (
-              <CatalogCard key={card.id} card={card} />
+              <CatalogMasterCard key={card.id} card={card} />
             ))}
           </ul>
           {visibleCount < catalogMaster.length && (
