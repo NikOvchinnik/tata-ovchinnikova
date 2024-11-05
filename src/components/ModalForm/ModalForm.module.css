@@ -4,8 +4,9 @@
   gap: 4px;
   background-color: inherit;
   margin-bottom: 16px;
-  color: #848484;
-  fill: #848484;
+  color: var(--secondary-text);
+  fill: var(--secondary-text);
+  transition: fill 0.3s ease, color 0.3s ease;
 }
 
 .btnBack:hover {
@@ -21,7 +22,7 @@
 .formContainer {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
 }
 
 .inputContainer {
@@ -36,32 +37,41 @@
 
 .inputText {
   border-radius: 4px;
-  border: 1px solid #ccc;
-  padding: 5px;
+  border: 1px solid var(--border);
+  padding: 8px;
+  color: var(--secondary-text);
+  font-weight: 600;
+  font-size: 14px;
 }
 
 .spanLabel {
   color: var(--nav);
 }
 
-.publickContainer {
+.privacyContainer {
   display: flex;
   flex-direction: column;
 }
 
-.publickLabel {
+.privacyLabel {
   font-size: 12px;
   font-weight: 500;
 }
 
-.publickInput{
-    margin-right: 4px;
+.privacyInput {
+  margin-right: 4px;
+}
+
+.privacyLink {
+  color: var(--secondary-text);
+  text-decoration: underline;
+  font-weight: 500;
 }
 
 .btnBuy {
   margin-top: 30px;
   background-color: var(--background);
-  border: 1px solid #ccc;
+  border: 1px solid var(--border);
   padding: 6px 100px;
   font-weight: bold;
   border-radius: 4px;

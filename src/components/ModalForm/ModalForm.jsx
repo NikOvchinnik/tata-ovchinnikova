@@ -3,12 +3,12 @@ import style from './ModalForm.module.css';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
 import Icon from '../Icon/Icon';
-import { useId } from 'react';
+import { useId} from 'react';
 
 const schemaYup = Yup.object().shape({
   name: Yup.string().required("*напишіть ваше ім'я"),
-  phone: Yup.string().required("*напишіть ваш номер телефону"),
-  messenger: Yup.string().required("*оберіть месенджер для звязку"),
+  phone: Yup.string().required('*напишіть ваш номер телефону'),
+  messenger: Yup.string().required('*оберіть месенджер для звязку'),
   comment: Yup.string(),
   privacy: Yup.boolean().oneOf(
     [true],
@@ -24,7 +24,12 @@ const defaultValues = {
   privacy: false,
 };
 
-const ModalForm = ({ card, closeModalForm, closeModalWindow }) => {
+const ModalForm = ({
+  card,
+  closeModalForm,
+  closeModalWindow,
+  openModalSuccessfully,
+}) => {
   const {
     register,
     handleSubmit,
@@ -38,11 +43,12 @@ const ModalForm = ({ card, closeModalForm, closeModalWindow }) => {
   const phoneId = useId();
   const messengerId = useId();
   const commentId = useId();
-  const publickId = useId();
+  const privacyId = useId();
 
   const onSubmit = data => {
     console.log(card.title);
     console.log(data);
+    openModalSuccessfully();
     closeModalForm();
     closeModalWindow();
   };
@@ -111,18 +117,25 @@ const ModalForm = ({ card, closeModalForm, closeModalWindow }) => {
             placeholder="Напишіть свій коментар..."
           ></textarea>
         </div>
-        <div className={style.publickContainer}>
-          <label htmlFor={publickId} className={style.publickLabel}>
+        <div className={style.privacyContainer}>
+          <label htmlFor={privacyId} className={style.privacyLabel}>
             <input
-              className={style.publickInput}
-              id={publickId}
+              className={style.privacyInput}
+              id={privacyId}
               type="checkbox"
               {...register('privacy')}
             />
-            ознайомлений з Політикою конфіденційності і Публічною офертою
+            ознайомлений з{' '}
+            <a className={style.privacyLink} href="">
+              Політикою конфіденційності
+            </a>{' '}
+            і{' '}
+            <a className={style.privacyLink} href="">
+              Договором публічної оферти
+            </a>
           </label>
-          {errors.publick && (
-            <p className={style.error}>{errors.publick.message}</p>
+          {errors.privacy && (
+            <p className={style.error}>{errors.privacy.message}</p>
           )}
         </div>
         <button type="submit" className={style.btnBuy}>

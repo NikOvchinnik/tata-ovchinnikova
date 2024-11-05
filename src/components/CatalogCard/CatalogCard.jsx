@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import ModalWindow from '../ModalWindow/ModalWindow';
 import style from './CatalogCard.module.css';
+import ModalSuccessfully from '../ModalSuccessfully/ModalSuccessfully';
 
 const CatalogCard = ({ card }) => {
   const [isModalOpen, setModalIsOpen] = useState(false);
+  const [isModalSuccessfullyOpen, setModalSuccessfullyIsOpen] = useState(false);
 
   const openModal = () => {
     setModalIsOpen(true);
@@ -11,6 +13,14 @@ const CatalogCard = ({ card }) => {
 
   const closeModal = () => {
     setModalIsOpen(false);
+  };
+
+  const openModalSuccessfully = () => {
+    setModalSuccessfullyIsOpen(true);
+  };
+
+  const closeModalSuccessfully = () => {
+    setModalSuccessfullyIsOpen(false);
   };
 
   return (
@@ -55,6 +65,12 @@ const CatalogCard = ({ card }) => {
       <ModalWindow
         isModalOpen={isModalOpen}
         onCloseModal={closeModal}
+        onOpenModalSuccessfully={openModalSuccessfully}
+        card={card}
+      />
+      <ModalSuccessfully
+        isModalOpen={isModalSuccessfullyOpen}
+        onCloseModal={closeModalSuccessfully}
         card={card}
       />
     </li>

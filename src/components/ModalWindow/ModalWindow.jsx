@@ -6,10 +6,14 @@ import ModalForm from '../ModalForm/ModalForm';
 import { Scrollbars } from 'react-custom-scrollbars-2';
 import { useState } from 'react';
 
-
 Modal.setAppElement('#root');
 
-const ModalWindow = ({ isModalOpen, onCloseModal, card }) => {
+const ModalWindow = ({
+  isModalOpen,
+  onCloseModal,
+  onOpenModalSuccessfully,
+  card,
+}) => {
   const [isModalFormOpen, setModalFormIsOpen] = useState(false);
 
   const openModalForm = () => {
@@ -58,6 +62,7 @@ const ModalWindow = ({ isModalOpen, onCloseModal, card }) => {
                   card={card}
                   closeModalForm={closeModalForm}
                   closeModalWindow={onCloseModal}
+                  openModalSuccessfully={onOpenModalSuccessfully}
                 />
               ) : (
                 <ModalCard card={card} openModalForm={openModalForm} />
