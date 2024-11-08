@@ -79,6 +79,7 @@
 }
 
 .btnBuy {
+  color: var(--main-text);
   background-color: var(--background);
   border: 1px solid var(--border);
   padding: 6px 100px;

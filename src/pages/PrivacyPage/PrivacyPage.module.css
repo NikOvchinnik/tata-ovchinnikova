@@ -1,0 +1,13 @@
+.mainContainer {
+  padding: 0 15px;
+  margin: 15px auto 30px auto;
+  max-width: 1410px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.titlePrivacy{
+    text-align: center;
+}

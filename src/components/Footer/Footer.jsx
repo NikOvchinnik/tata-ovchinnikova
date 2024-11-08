@@ -1,5 +1,6 @@
 import style from './Footer.module.css';
 import Icon from '../Icon/Icon';
+import { NavLink } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -51,19 +52,19 @@ const Footer = () => {
         <div>
           <ul className={style.privacyList}>
             <li>
-              <a className={style.privacyLink} href="">
+              <NavLink to="/delivery" className={style.privacyLink}>
                 Оплата і доставка
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a className={style.privacyLink} href="">
+              <NavLink to="/privacy-policy" className={style.privacyLink}>
                 Політика конфіденційності
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a className={style.privacyLink} href="">
+              <NavLink to="/public-contract" className={style.privacyLink}>
                 Договір публічної оферти
-              </a>
+              </NavLink>
             </li>
           </ul>
         </div>

@@ -39,6 +39,7 @@
 .btnConfirm {
   background-color: var(--background);
   border: 1px solid var(--border);
+  color: var(--main-text);
   padding: 6px 100px;
   font-weight: bold;
   border-radius: 4px;
