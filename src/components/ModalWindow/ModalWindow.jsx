@@ -45,7 +45,7 @@ const ModalWindow = ({
           <div className={style.cardContainer}>
             <div className={style.imgContainer}>
               <img
-                src={card.images}
+                src={card.images[0]}
                 alt={card.title}
                 className={style.cardImg}
               />

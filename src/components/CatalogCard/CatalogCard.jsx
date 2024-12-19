@@ -27,7 +27,7 @@ const CatalogCard = ({ card }) => {
     <li className={style.cardContainer}>
       <div className={style.imgContainer}>
         <img
-          src={card.images}
+          src={card.images[0]}
           alt={card.title}
           width="320"
           height="426"

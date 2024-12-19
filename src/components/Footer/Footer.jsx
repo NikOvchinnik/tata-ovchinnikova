@@ -38,8 +38,11 @@ const Footer = () => {
           </ul>
           <ul className={style.adressList}>
             <li>
-              <a className={style.adressLink} href="mailto:tata@gmail.com<">
-                tata@gmail.com
+              <a
+                className={style.adressLink}
+                href="mailto:mankovskaj@gmail.com<"
+              >
+                mankovskaj@gmail.com
               </a>
             </li>
             <li>

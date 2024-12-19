@@ -31,6 +31,12 @@
   flex-direction: column;
 }
 
+.textContainer{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
 .colorText {
   color: #848484;
   font-size: 10px;

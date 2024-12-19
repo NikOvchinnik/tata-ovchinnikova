@@ -15,6 +15,7 @@ export const selectFilteredCards = createSelector(
           .includes(filters.search.trim().toLowerCase());
 
         const matchesCategory = (() => {
+          if (card.category === 'Наявність') return false;
           if (card.category === 'Майстер-клас') return false;
           if (filters.category === 'Усі') return true;
           if (filters.category === 'Нові') return card.isNew === true;
@@ -31,7 +32,7 @@ export const selectFilteredCards = createSelector(
 
 export const selectSaleCards = createSelector([selectCards], cards =>
   cards
-    .filter(card => card.isInStock === true)
+    .filter(card => card.category === 'Наявність')
     .sort((a, b) => b.rating - a.rating)
 );
 

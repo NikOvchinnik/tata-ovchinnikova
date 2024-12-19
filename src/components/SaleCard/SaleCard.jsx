@@ -17,7 +17,7 @@ const SaleCard = ({ card }) => {
     <li className={style.cardContainer}>
       <div className={style.imgContainer}>
         <img
-          src={card.images}
+          src={card.images[0]}
           alt={card.title}
           width="320"
           height="426"
@@ -31,18 +31,16 @@ const SaleCard = ({ card }) => {
       </div>
       <div className={style.textContainer}>
         <h3 className={style.titleCard}>{card.title}</h3>
-        {card.isInStock && (
           <div className={style.stockContainer}>
             <p>в наявності</p>
             <ul className={style.sizeList}>
-              {card.sizesInStock.map(size => (
+              {card.sizes.map(size => (
                 <li key={size} className={style.sizeItem}>
                   {size}
                 </li>
               ))}
             </ul>
           </div>
-        )}
         <div className={style.priceCard}>
           {card.isSale ? (
             <>
