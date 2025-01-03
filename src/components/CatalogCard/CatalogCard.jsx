@@ -51,11 +51,11 @@ const CatalogCard = ({ card }) => {
         <div className={style.priceCard}>
           {card.isSale ? (
             <>
-              <p className={style.priceText}>{card.salePrice} UAH</p>
-              <p className={style.salePriceText}>{card.price} UAH</p>
+              <p className={style.priceText}>{card.salePrice} ₴</p>
+              <p className={style.salePriceText}>{card.price} ₴</p>
             </>
           ) : (
-            <p className={style.priceText}>{card.price} UAH</p>
+            <p className={style.priceText}>{card.price} ₴</p>
           )}
         </div>
         <button onClick={openModal} className={style.btnBuy} type="button">

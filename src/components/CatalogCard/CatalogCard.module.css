@@ -38,7 +38,7 @@
 
 .titleCard {
   font-size: 18px;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
   text-align: center;
   line-height: 1.2;
 }
@@ -48,7 +48,7 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .sizeItem {
@@ -63,19 +63,19 @@
   justify-content: center;
   align-items: center;
   gap: 8px;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .priceText {
-  font-size: 16px; 
+  font-size: 18px; 
   font-weight: bold; 
   color: var(--nav); 
 }
 
 .salePriceText {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: bold;
-  color: var(--title);
+  color: #898989;
   text-decoration: line-through;
 }
 

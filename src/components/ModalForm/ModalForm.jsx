@@ -3,13 +3,17 @@ import style from './ModalForm.module.css';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
 import Icon from '../Icon/Icon';
-import { useId} from 'react';
+import { useId } from 'react';
 
 const schemaYup = Yup.object().shape({
-  name: Yup.string().required("*напишіть ваше ім'я"),
-  phone: Yup.string().required('*напишіть ваш номер телефону'),
+  name: Yup.string()
+    .max(50, "*ім'я має бути не більше 50 символів")
+    .required("*напишіть ваше ім'я"),
+  phone: Yup.string()
+    .matches(/^[\d\s\-+()]+$/, '*введіть дійсний номер телефону')
+    .required('*напишіть ваш номер телефону'),
   messenger: Yup.string().required('*оберіть месенджер для звязку'),
-  comment: Yup.string(),
+  comment: Yup.string().max(300, '*коментар має бути не більше 300 символів'),
   privacy: Yup.boolean().oneOf(
     [true],
     '*потрібно прийняти політику конфіденційності'

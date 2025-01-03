@@ -69,7 +69,7 @@
 }
 
 .btnBuy {
-  margin-top: 30px;
+  margin-top: 8px;
   background-color: var(--background);
   border: 1px solid var(--border);
   color: var(--main-text);

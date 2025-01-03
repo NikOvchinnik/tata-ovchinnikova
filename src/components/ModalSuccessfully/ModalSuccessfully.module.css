@@ -9,7 +9,7 @@
   position: relative;
   background-color: var(--background);
   border-radius: 5px;
-  padding: 40px;
+  padding: 60px;
   max-height: 85vh;
 }
 
@@ -25,7 +25,7 @@
 }
 
 .btnClose:hover {
- fill: var(--nav);
+  fill: var(--nav);
 }
 
 .cardContainer {
@@ -35,6 +35,40 @@
   gap: 30px;
   width: 480px;
 }
+
+.cardTitle {
+  font-size: 18px;
+  color: #28a745;
+}
+
+.contactsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contactsList {
+  display: flex;
+  gap: 40px;
+  color: var(--title);
+}
+
+.adressLink:hover,
+.adressLink:focus {
+  color: var(--nav);
+  transition: color 0.3s ease;
+}
+
+.footerIcon {
+  fill: var(--title);
+  transition: fill 0.3s ease;
+}
+
+.footerIcon:hover,
+.footerIcon:focus {
+  fill: var(--nav);
+}
+
 
 .btnConfirm {
   background-color: var(--background);
