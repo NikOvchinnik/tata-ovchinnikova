@@ -8,6 +8,7 @@
 .imgContainer {
   height: 426px;
   position: relative;
+  cursor: pointer;
 }
 
 .cardImg {

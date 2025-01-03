@@ -3,6 +3,8 @@ import style from './ModalWindow.module.css';
 import Icon from '../Icon/Icon';
 import ModalCard from '../ModalCard/ModalCard';
 import ModalForm from '../ModalForm/ModalForm';
+import ImageGallery from 'react-image-gallery';
+import 'react-image-gallery/styles/css/image-gallery.css';
 import { Scrollbars } from 'react-custom-scrollbars-2';
 import { useState } from 'react';
 
@@ -24,6 +26,11 @@ const ModalWindow = ({
     setModalFormIsOpen(false);
   };
 
+  const galleryImages = card.images.map(url => ({
+    original: url,
+    originalAlt: card.title,
+  }));
+
   return (
     <Modal
       isOpen={isModalOpen}
@@ -44,11 +51,7 @@ const ModalWindow = ({
         <Scrollbars style={{ width: 860, height: '75vh' }}>
           <div className={style.cardContainer}>
             <div className={style.imgContainer}>
-              <img
-                src={card.images[0]}
-                alt={card.title}
-                className={style.cardImg}
-              />
+              <ImageGallery items={galleryImages} />
               {card.isNew && (
                 <div className={style.newContainer}>
                   <p>NEW</p>

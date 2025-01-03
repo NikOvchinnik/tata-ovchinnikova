@@ -25,7 +25,7 @@ const CatalogCard = ({ card }) => {
 
   return (
     <li className={style.cardContainer}>
-      <div className={style.imgContainer}>
+      <div className={style.imgContainer} onClick={openModal}>
         <img
           src={card.images[0]}
           alt={card.title}

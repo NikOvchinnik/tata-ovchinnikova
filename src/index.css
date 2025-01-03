@@ -65,3 +65,12 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+.image-gallery-left-nav,
+.image-gallery-right-nav {
+  width: 60px;
+  height: 60px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
