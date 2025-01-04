@@ -1,12 +1,15 @@
 .cardContainer {
-  width: 320px;
+  width: 165px;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .imgContainer {
-  height: 426px;
+  height: 220px;
   position: relative;
   cursor: pointer;
 }
@@ -19,25 +22,25 @@
 
 .newContainer {
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: 5px;
+  left: 5px;
   background-color: rgba(255, 255, 255, 0.8);
-  padding: 4px 8px;
+  padding: 2px 4px;
   border-radius: 4px;
   font-weight: bold;
+  font-size: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .textContainer {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  padding: 10px;
+  padding: 6px;
 }
 
 .titleCard {
-  font-size: 18px;
+  font-size: 14px;
   margin-bottom: 6px;
   text-align: center;
   line-height: 1.2;
@@ -45,7 +48,7 @@
 
 .textMaster {
   margin-bottom: 6px;
-  font-size: 14px;
+  font-size: 10px;
   font-weight: 700;
   font-family: 'Poppins', sans-serif;
   color: #555555c6;
@@ -54,20 +57,20 @@
 }
 
 .spanMaster {
-  font-size: 12px;
+  font-size: 8px;
 }
 
 .stockContainer {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: 4px;
   background-color: var(--nav);
   color: white;
-  padding: 3px 8px;
+  padding: 2px 4px;
   border-radius: 4px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  font-size: 12px;
+  font-size: 10px;
   margin-bottom: 6px;
 }
 
@@ -75,20 +78,20 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: 4px;
 }
 
 .sizeList {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: 4px;
   margin-bottom: 6px;
 }
 
 .sizeItem {
-  font-size: 8px;
-  padding: 2px 6px;
+  font-size: 6px;
+  padding: 2px 4px;
   border: 1px solid var(--border);
   border-radius: 4px;
 }
@@ -97,28 +100,29 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
   margin-bottom: 6px;
 }
 
 .priceText {
-  font-size: 18px;
+  font-size: 14px;
   font-weight: bold;
   color: var(--nav);
 }
 
 .salePriceText {
-  font-size: 16px;
+  font-size: 12px;
   font-weight: bold;
   color: #898989;
   text-decoration: line-through;
 }
 
 .btnBuy {
+  margin-top: auto;
   color: var(--main-text);
   background-color: var(--background);
   border: 1px solid var(--border);
-  padding: 6px 100px;
+  padding: 6px 20px;
   font-weight: bold;
   border-radius: 4px;
   transition: border-color 0.3s ease, color 0.3s ease;
@@ -128,4 +132,86 @@
 .btnBuy:focus {
   border: 1px solid var(--nav);
   color: var(--nav);
+}
+
+@media screen and (min-width: 768px) {
+  .cardContainer {
+    width: 236px;
+  }
+
+  .imgContainer {
+    height: 314px;
+  }
+
+  .newContainer {
+    top: 10px;
+    left: 10px;
+    padding: 4px 8px;
+    font-size: 16px;
+  }
+
+  .textContainer {
+    padding: 10px;
+  }
+
+  .titleCard {
+    font-size: 18px;
+  }
+
+  .textMaster {
+    font-size: 14px;
+  }
+
+  .spanMaster {
+    font-size: 12px;
+  }
+
+  .stockContainer {
+    gap: 8px;
+    padding: 3px 8px;
+    font-size: 12px;
+  }
+
+  .stockList {
+    gap: 8px;
+  }
+
+  .sizeList {
+    gap: 8px;
+  }
+
+  .sizeItem {
+    font-size: 8px;
+    padding: 2px 6px;
+  }
+
+  .priceCard {
+    gap: 8px;
+  }
+
+  .priceText {
+    font-size: 18px;
+  }
+
+  .salePriceText {
+    font-size: 16px;
+  }
+
+  .btnBuy {
+    padding: 6px 50px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .cardContainer {
+    width: 330px;
+  }
+
+  .imgContainer {
+    height: 420px;
+  }
+
+  .btnBuy {
+    padding: 6px 100px;
+  }
 }

@@ -1,6 +1,6 @@
 .catalogList {
   display: flex;
-  gap: 33px;
+  gap: 15px;
   flex-wrap: wrap;
 }
 
@@ -18,4 +18,10 @@
 .btnLoadMore:hover {
   border-color: var(--nav);
   color: var(--nav);
+}
+
+@media screen and (min-width: 1440px) {
+  .catalogList {
+    gap: 30px;
+  }
 }
