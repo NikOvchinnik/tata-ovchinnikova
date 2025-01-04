@@ -37,7 +37,7 @@ const ModalCard = ({ card, openModalForm }) => {
               <p className={style.titleListContainer}>Розміри в наявності:</p>
               <ul className={style.sizeList}>
                 {card.saleSizes.map(size => (
-                  <li key={size} className={style.sizeItem}>
+                  <li key={size} className={style.sizeItemSale}>
                     {size}
                   </li>
                 ))}

@@ -1,12 +1,14 @@
 import DocTitle from '../../components/DocTitle';
-import style from './PrivacyPage.module.css';
+import style from './PrivacyPolicyPage.module.css';
 
-const PrivacyPage = () => {
+const PrivacyPolicyPage = () => {
   return (
     <main className={style.mainContainer}>
-      <DocTitle>Delivery</DocTitle>
+      <DocTitle>PrivacyPolicy</DocTitle>
       <h2 className={style.titlePrivacy}>Політика конфіденційності</h2>
-      <p><strong>Опублікована: 05 листопада, 2024 року</strong></p>
+      <p>
+        <strong>Опублікована: 05 листопада, 2024 року</strong>
+      </p>
       <p>
         Інтернет-магазин{' '}
         <a href="https://tata-ovchinnikova.vercel.app" target="_blank">
@@ -135,4 +137,4 @@ const PrivacyPage = () => {
   );
 };
 
-export default PrivacyPage;
+export default PrivacyPolicyPage;

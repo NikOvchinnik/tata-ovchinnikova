@@ -1,10 +1,10 @@
 import DocTitle from '../../components/DocTitle';
-import style from './ContractPage.module.css';
+import style from './PublicContractPage.module.css';
 
-const ContractPage = () => {
+const PublicContractPage = () => {
   return (
     <main className={style.mainContainer}>
-      <DocTitle>Contract</DocTitle>
+      <DocTitle>PublicContract</DocTitle>
       <div>
         <h3></h3>
       </div>
@@ -12,4 +12,4 @@ const ContractPage = () => {
   );
 };
 
-export default ContractPage;
+export default PublicContractPage;

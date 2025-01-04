@@ -7,8 +7,10 @@ const MasterPage = lazy(() => import('./pages/MasterPage/MasterPage'));
 const SalePage = lazy(() => import('./pages/SalePage/SalePage'));
 const AboutPage = lazy(() => import('./pages/AboutPage/AboutPage'));
 const DeliveryPage = lazy(() => import('./pages/DeliveryPage/DeliveryPage'));
-const ContractPage = lazy(() => import('./pages/ContractPage/ContractPage'));
-const PrivacyPage = lazy(() => import('./pages/PrivacyPage/PrivacyPage'));
+const PublicContractPage = lazy(() =>
+  import('./pages/PublicContractPage/PublicContractPage')
+);
+const PrivacyPolicyPage = lazy(() => import('./pages/PrivacyPolicyPage/PrivacyPolicyPage'));
 
 const App = () => {
   return (
@@ -19,8 +21,8 @@ const App = () => {
         <Route path="/sale" element={<SalePage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/delivery" element={<DeliveryPage />} />
-        <Route path="/public-contract" element={<ContractPage />} />
-        <Route path="/privacy-policy" element={<PrivacyPage />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+        <Route path="/public-contract" element={<PublicContractPage />} />
         <Route path="*" element={<HomePage />} />
       </Routes>
     </Layout>

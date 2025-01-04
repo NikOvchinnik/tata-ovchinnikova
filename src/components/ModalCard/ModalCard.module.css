@@ -9,7 +9,6 @@
   gap: 8px;
 }
 
-
 .titleListContainer {
   font-weight: 600;
 }
@@ -27,12 +26,20 @@
   border-radius: 4px;
 }
 
+.sizeItemSale {
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: var(--background);
+  background-color: var(--nav);
+}
+
 .colorListContainer {
   display: flex;
   flex-direction: column;
 }
 
-.textContainer{
+.textContainer {
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -98,6 +105,6 @@
   color: var(--nav);
 }
 
-.iconLevel{
+.iconLevel {
   fill: var(--nav);
 }
