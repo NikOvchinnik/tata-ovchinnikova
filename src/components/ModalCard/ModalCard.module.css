@@ -97,3 +97,7 @@
   border: 1px solid var(--nav);
   color: var(--nav);
 }
+
+.iconLevel{
+  fill: var(--nav);
+}

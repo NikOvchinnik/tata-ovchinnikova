@@ -43,6 +43,41 @@
   line-height: 1.2;
 }
 
+.textMaster {
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  color: #555555c6;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.spanMaster {
+  font-size: 12px;
+}
+
+.stockContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: var(--nav);
+  color: white;
+  padding: 3px 8px;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+
+.stockList {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
 .sizeList {
   display: flex;
   align-items: center;
@@ -67,9 +102,9 @@
 }
 
 .priceText {
-  font-size: 18px; 
-  font-weight: bold; 
-  color: var(--nav); 
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--nav);
 }
 
 .salePriceText {

@@ -41,13 +41,30 @@ const CatalogCard = ({ card }) => {
       </div>
       <div className={style.textContainer}>
         <h3 className={style.titleCard}>{card.title}</h3>
-        <ul className={style.sizeList}>
-          {card.sizes.map(size => (
-            <li key={size} className={style.sizeItem}>
-              {size}
-            </li>
-          ))}
-        </ul>
+        {card.category === 'Майстер-клас' ? (
+          <p className={style.textMaster}>
+            Майстер<span className={style.spanMaster}>-</span>клас
+          </p>
+        ) : card.category === 'Наявність' ? (
+          <div className={style.stockContainer}>
+            <p>в наявності</p>
+            <ul className={style.stockList}>
+              {card.saleSizes.map(size => (
+                <li key={size} className={style.sizeItem}>
+                  {size}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ) : (
+          <ul className={style.sizeList}>
+            {card.sizes.map(size => (
+              <li key={size} className={style.sizeItem}>
+                {size}
+              </li>
+            ))}
+          </ul>
+        )}
         <div className={style.priceCard}>
           {card.isSale ? (
             <>

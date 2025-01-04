@@ -6,7 +6,7 @@ import Loader from '../../components/Loader/Loader';
 import { selectLoading, selectSaleCards } from '../../redux/cards/selectors';
 import { useEffect } from 'react';
 import Catalog from '../../components/Catalog/Catalog';
-import SaleCard from '../../components/SaleCard/SaleCard';
+import CatalogCard from '../../components/CatalogCard/CatalogCard';
 
 const SalePage = () => {
   const dispatch = useDispatch();
@@ -20,11 +20,14 @@ const SalePage = () => {
     <main className={style.mainContainer}>
       <DocTitle>Sale</DocTitle>
       <h2 className={style.titleSale}>Наявність</h2>
-      <p className={style.textSale}>*вироби у наявності готові до відправки і можуть бути у вас вже через 3-7 днів</p>
+      <p className={style.textSale}>
+        Вироби у наявності готові до відправки і можуть бути у вас вже через
+        3-7 днів
+      </p>
       {loading ? (
         <Loader />
       ) : (
-        <Catalog selector={selectSaleCards} cardComponent={SaleCard} />
+        <Catalog selector={selectSaleCards} cardComponent={CatalogCard} />
       )}
     </main>
   );

@@ -1,3 +1,4 @@
+import Icon from '../Icon/Icon';
 import style from './ModalCard.module.css';
 
 const ModalCard = ({ card, openModalForm }) => {
@@ -6,16 +7,62 @@ const ModalCard = ({ card, openModalForm }) => {
       {card.description && (
         <p className={style.cardDescription}>{card.description}</p>
       )}
-      {card.colors && (
-        <div className={style.colorListContainer}>
-          <div className={style.listContainer}>
-            <p className={style.titleListContainer}>Колір на моделі:</p>
-            <p>{card.colors.join(', ')}</p>
+      {card.category === 'Майстер-клас' ? (
+        <>
+          {card.level && (
+            <div className={style.listContainer}>
+              <p className={style.titleListContainer}>Складність:</p>
+              {[...Array(5)].map((_, index) => (
+                <Icon
+                  key={index}
+                  id={index < card.level ? 'star' : 'star-outline'}
+                  width="20"
+                  height="20"
+                  className={style.iconLevel}
+                />
+              ))}
+            </div>
+          )}
+          {card.tool && (
+            <div className={style.listContainer}>
+              <p className={style.titleListContainer}>Інструмент:</p>
+              <p>{card.tool}</p>
+            </div>
+          )}
+        </>
+      ) : card.category === 'Наявність' ? (
+        <>
+          {card.saleSizes && (
+            <div className={style.listContainer}>
+              <p className={style.titleListContainer}>Розміри в наявності:</p>
+              <ul className={style.sizeList}>
+                {card.saleSizes.map(size => (
+                  <li key={size} className={style.sizeItem}>
+                    {size}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+          {card.colors && (
+            <div className={style.listContainer}>
+              <p className={style.titleListContainer}>Кольори в наявності:</p>
+              <p>{card.colors.join(', ')}</p>
+            </div>
+          )}
+        </>
+      ) : (
+        card.colors && (
+          <div className={style.colorListContainer}>
+            <div className={style.listContainer}>
+              <p className={style.titleListContainer}>Колір на моделі:</p>
+              <p>{card.colors.join(', ')}</p>
+            </div>
+            <p className={style.colorText}>
+              *колір виробу можна підібрати індивідуально при замовлені
+            </p>
           </div>
-          <p className={style.colorText}>
-            *колір виробу можна підібрати індивідуально при замовлені
-          </p>
-        </div>
+        )
       )}
       {card.materials && (
         <div className={style.listContainer}>
@@ -72,14 +119,28 @@ const ModalCard = ({ card, openModalForm }) => {
         Оформити замовлення
       </button>
       <div className={style.textContainer}>
-        <p className={style.colorText}>
-          *це попереднє замовлення. Ми зв’яжемось з вами для уточнення термінів
-          виготовлення та підбору індивідуальних розмірів
-        </p>
-        <p className={style.colorText}>
-          **ціна вказана за розмір M, ціна може змінюватись від розміру і
-          обраного вами матеріалу
-        </p>
+        {card.category === 'Майстер-клас' ? (
+          <p className={style.colorText}>
+            *після оформлення замовлення ми з вами звяжемось, щоб уточнити
+            деталі і надати реквізити на оплату
+          </p>
+        ) : card.category === 'Наявність' ? (
+          <p className={style.colorText}>
+            *після оформлення замовлення ми з вами звяжемось, щоб уточнити
+            деталі і надати реквізити на оплату
+          </p>
+        ) : (
+          <>
+            <p className={style.colorText}>
+              *це попереднє замовлення. Ми зв’яжемось з вами для уточнення
+              термінів виготовлення та підбору індивідуальних розмірів
+            </p>
+            <p className={style.colorText}>
+              **ціна вказана за розмір M, ціна може змінюватись від розміру і
+              обраного вами матеріалу
+            </p>
+          </>
+        )}
       </div>
     </div>
   );

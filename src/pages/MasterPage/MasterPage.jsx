@@ -6,7 +6,7 @@ import Loader from '../../components/Loader/Loader';
 import { selectLoading, selectMasterCards } from '../../redux/cards/selectors';
 import { useEffect } from 'react';
 import Catalog from '../../components/Catalog/Catalog';
-import MasterCard from '../../components/MasterCard/MasterCard';
+import CatalogCard from '../../components/CatalogCard/CatalogCard';
 
 const MasterPage = () => {
   const dispatch = useDispatch();
@@ -21,16 +21,16 @@ const MasterPage = () => {
       <DocTitle>Master Class</DocTitle>
       <h2 className={style.titleMaster}>Master Class</h2>
       <p className={style.textMaster}>
-        Майстер-клас — це детальний текстовий посібник у форматі PDF, який ви
-        легко можете відкрити на будь-якому пристрої. В посібнику міститься
-        покроковий опис кожного етапу в'язання, а також відео з основними
-        техніками та процесами. Майстер-клас ідеально підходить для тих, хто
-        прагне створити щось унікальне своїми руками або на подарунок близьким.
+        Майстер-клас — це детальний текстовий посібник у форматі PDF. В
+        посібнику міститься покроковий опис кожного етапу в'язання, а також
+        відео з основними техніками та процесами. Майстер-клас ідеально
+        підходить для тих, хто прагне створити щось унікальне своїми руками або
+        на подарунок близьким.
       </p>
       {loading ? (
         <Loader />
       ) : (
-        <Catalog selector={selectMasterCards} cardComponent={MasterCard} />
+        <Catalog selector={selectMasterCards} cardComponent={CatalogCard} />
       )}
     </main>
   );
