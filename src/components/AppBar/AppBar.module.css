@@ -9,70 +9,156 @@
 .headerContainer {
   padding: 0 15px;
   margin: 0 auto;
-  max-width: 1410px;
+  max-width: 375px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .headerLogo {
-  margin-right: 100px;
-  padding: 8px 0;
+  width: 110px;
+  padding: 10px 0;
 }
 
 .navContainer {
-  display: flex;
-  gap: 30px;
-}
-
-.navItem {
-  padding: 10px 0;
-  transition: color 0.3s ease, text-shadow 0.3s ease;
-}
-
-.navItemActive {
-  padding: 10px 0;
-  border-bottom: 2px solid black;
-}
-
-.navItemSale {
-  padding: 10px 0;
-  color: var(--nav);
-}
-
-.navItem:hover,
-.navItem:focus {
-  text-shadow: 2px 2px 12px rgba(41, 54, 136, 0.2);
-  color: var(--nav);
+  display: none;
 }
 
 .addressContainer {
-  margin-left: auto;
+  display: none;
 }
 
-.addressList {
+.iconsContainer {
   display: flex;
   gap: 30px;
 }
 
-.addressItem {
-  font-style: normal;
-  font-size: 14px;
-}
-
-.adressLink {
+.iconsLink {
   display: flex;
-  gap: 5px;
   align-items: center;
-  padding: 10px 0;
-  transition: color 0.3s ease, text-shadow 0.3s ease;
+  margin-left: auto;
+  padding: 12px 0;
+  fill: var(--title);
+  background-color: inherit;
+  transition: fill 0.3s ease, text-shadow 0.3s ease;
 }
 
-.instaIcon {
+.iconsLink:hover,
+.iconsLink:focus {
+  text-shadow: 2px 2px 12px rgba(41, 54, 136, 0.2);
   fill: var(--nav);
 }
 
-.adressLink:hover,
-.adressLink:focus {
+.btnBurger {
+  display: flex;
+  align-items: center;
+  padding: 8px 0;
+  fill: var(--title);
+  background-color: inherit;
+  transition: fill 0.3s ease, text-shadow 0.3s ease;
+}
+
+.btnBurger:hover,
+.btnBurger:focus {
   text-shadow: 2px 2px 12px rgba(41, 54, 136, 0.2);
-  color: var(--nav);
+  fill: var(--nav);
+}
+
+.btnClose {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  fill: var(--title);
+  background-color: inherit;
+  transition: fill 0.3s ease, text-shadow 0.3s ease;
+}
+
+.btnClose:hover,
+.btnClose:focus {
+  text-shadow: 2px 2px 12px rgba(41, 54, 136, 0.2);
+  fill: var(--nav);
+}
+
+@media screen and (min-width: 768px) {
+}
+
+@media screen and (min-width: 1440px) {
+  .header {
+    background-color: var(--background);
+    box-shadow: 2px 2px 12px rgba(41, 54, 136, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  .headerContainer {
+    padding: 0 15px;
+    margin: 0 auto;
+    max-width: 1410px;
+    display: flex;
+    align-items: center;
+  }
+
+  .headerLogo {
+    margin-right: 100px;
+    padding: 8px 0;
+  }
+
+  .navContainer {
+    display: flex;
+    gap: 30px;
+  }
+
+  .navItem {
+    padding: 10px 0;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+  }
+
+  .navItemActive {
+    padding: 10px 0;
+    border-bottom: 2px solid black;
+  }
+
+  .navItemSale {
+    padding: 10px 0;
+    color: var(--nav);
+  }
+
+  .navItem:hover,
+  .navItem:focus {
+    text-shadow: 2px 2px 12px rgba(41, 54, 136, 0.2);
+    color: var(--nav);
+  }
+
+  .addressContainer {
+    margin-left: auto;
+  }
+
+  .addressList {
+    display: flex;
+    gap: 30px;
+  }
+
+  .addressItem {
+    font-style: normal;
+    font-size: 14px;
+  }
+
+  .adressLink {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    padding: 10px 0;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+  }
+
+  .instaIcon {
+    fill: var(--nav);
+  }
+
+  .adressLink:hover,
+  .adressLink:focus {
+    text-shadow: 2px 2px 12px rgba(41, 54, 136, 0.2);
+    color: var(--nav);
+  }
 }

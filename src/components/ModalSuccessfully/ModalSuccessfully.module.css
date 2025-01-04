@@ -51,6 +51,7 @@
   display: flex;
   gap: 40px;
   color: var(--title);
+  justify-content: center;
 }
 
 .adressLink:hover,

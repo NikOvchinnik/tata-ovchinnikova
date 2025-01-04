@@ -1,0 +1,71 @@
+.modalWindow {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modalContainer {
+  position: relative;
+  background-color: var(--background);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.navContainer {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navItem {
+  padding: 6px 0;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.navItemActive {
+  padding: 6px 0;
+  border-bottom: 2px solid black;
+}
+
+.navItemSale {
+  padding: 6px 0;
+  color: var(--nav);
+}
+
+.navItem:hover,
+.navItem:focus {
+  text-shadow: 2px 2px 12px rgba(41, 54, 136, 0.2);
+  color: var(--nav);
+}
+
+.addressList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.addressItem {
+  font-style: normal;
+  font-size: 14px;
+}
+
+.adressLink {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  padding: 6px 0;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.instaIcon {
+  fill: var(--nav);
+}
+
+.adressLink:hover,
+.adressLink:focus {
+  text-shadow: 2px 2px 12px rgba(41, 54, 136, 0.2);
+  color: var(--nav);
+}

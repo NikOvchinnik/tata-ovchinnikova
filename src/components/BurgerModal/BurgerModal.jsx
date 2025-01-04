@@ -1,28 +1,23 @@
+import Modal from 'react-modal';
+import style from './BurgerModal.module.css';
 import { NavLink } from 'react-router-dom';
-import style from './AppBar.module.css';
 import Icon from '../Icon/Icon';
-import { useState } from 'react';
-import BurgerModal from '../BurgerModal/BurgerModal';
 
-const AppBar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+Modal.setAppElement('#root');
 
-  const openMenu = () => {
-    setIsMenuOpen(true);
-  };
-
-  const closeMenu = () => {
-    setIsMenuOpen(false);
-  };
-
+const BurgerModal = ({ isModalOpen, onCloseModal }) => {
   return (
-    <header className={style.header}>
-      <div className={style.headerContainer}>
-        <NavLink to="/">
-          <img src="/logo.jpg" alt="logo" className={style.headerLogo} />
-        </NavLink>
+    <Modal
+      isOpen={isModalOpen}
+      onRequestClose={onCloseModal}
+      shouldCloseOnOverlayClick={true}
+      shouldCloseOnEsc={true}
+      className={style.modalWindow}
+    >
+      <div className={style.modalContainer}>
         <nav className={style.navContainer}>
           <NavLink
+            onClick={onCloseModal}
             to="/"
             className={({ isActive }) =>
               isActive ? style.navItemActive : style.navItem
@@ -31,6 +26,7 @@ const AppBar = () => {
             Каталог
           </NavLink>
           <NavLink
+            onClick={onCloseModal}
             to="/masterclass"
             className={({ isActive }) =>
               isActive ? style.navItemActive : style.navItem
@@ -39,6 +35,7 @@ const AppBar = () => {
             Майстер-класи
           </NavLink>
           <NavLink
+            onClick={onCloseModal}
             to="/sale"
             className={({ isActive }) =>
               isActive
@@ -49,6 +46,7 @@ const AppBar = () => {
             Sale
           </NavLink>
           <NavLink
+            onClick={onCloseModal}
             to="/about"
             className={({ isActive }) =>
               isActive ? style.navItemActive : style.navItem
@@ -80,40 +78,8 @@ const AppBar = () => {
             </li>
           </ul>
         </address>
-        <div className={style.iconsContainer}>
-          <a
-            href="https://www.instagram.com/_tata_ovchinnikova/"
-            className={style.iconsLink}
-          >
-            <Icon
-              id="insta"
-              width="18"
-              height="18"
-              className={style.iconsIcon}
-            />
-          </a>
-          <a href="https://t.me/tata_ovchinnikova" className={style.iconsLink}>
-            <Icon
-              id="telegram"
-              width="18"
-              height="18"
-              className={style.iconsSvg}
-            />
-          </a>
-        </div>
-        {isMenuOpen ? (
-          <button onClick={closeMenu} type="button" className={style.btnClose}>
-            <Icon id="x" width="20" height="20" className={style.instaIcon} />
-          </button>
-        ) : (
-          <button onClick={openMenu} type="button" className={style.btnBurger}>
-            <Icon id="menu" width="20" height="20" />
-          </button>
-        )}
       </div>
-      <BurgerModal isModalOpen={isMenuOpen} onCloseModal={closeMenu} />
-    </header>
+    </Modal>
   );
 };
-
-export default AppBar;
+export default BurgerModal;
