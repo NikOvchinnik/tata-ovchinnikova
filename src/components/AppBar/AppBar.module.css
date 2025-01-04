@@ -52,7 +52,7 @@
 .btnBurger {
   display: flex;
   align-items: center;
-  padding: 8px 0;
+  padding: 10px 0;
   fill: var(--title);
   background-color: inherit;
   transition: fill 0.3s ease, text-shadow 0.3s ease;
@@ -80,28 +80,13 @@
 }
 
 @media screen and (min-width: 768px) {
-}
-
-@media screen and (min-width: 1440px) {
-  .header {
-    background-color: var(--background);
-    box-shadow: 2px 2px 12px rgba(41, 54, 136, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-  }
-
   .headerContainer {
-    padding: 0 15px;
-    margin: 0 auto;
-    max-width: 1410px;
-    display: flex;
-    align-items: center;
+    max-width: 768px;
   }
 
   .headerLogo {
-    margin-right: 100px;
-    padding: 8px 0;
+    width: 130px;
+    padding: 10px 0;
   }
 
   .navContainer {
@@ -130,7 +115,32 @@
     color: var(--nav);
   }
 
+  .btnBurger {
+    display: none;
+  }
+
+  .btnClose {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .headerContainer {
+    max-width: 1440px;
+  }
+
+  .headerLogo {
+    width: 180px;
+    margin-right: 100px;
+    padding: 8px 0;
+  }
+
+  .iconsContainer {
+    display: none;
+  }
+
   .addressContainer {
+    display: flex;
     margin-left: auto;
   }
 
