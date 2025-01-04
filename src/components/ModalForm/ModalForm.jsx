@@ -4,6 +4,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
 import Icon from '../Icon/Icon';
 import { useId } from 'react';
+import { Link } from 'react-router-dom';
 
 const schemaYup = Yup.object().shape({
   name: Yup.string()
@@ -130,13 +131,13 @@ const ModalForm = ({
               {...register('privacy')}
             />
             ознайомлений з{' '}
-            <a className={style.privacyLink} href="">
+            <Link to="/privacy-policy" className={style.privacyLink}>
               Політикою конфіденційності
-            </a>{' '}
+            </Link>{' '}
             і{' '}
-            <a className={style.privacyLink} href="">
+            <Link to="/public-contract" className={style.privacyLink}>
               Договором публічної оферти
-            </a>
+            </Link>
           </label>
           {errors.privacy && (
             <p className={style.error}>{errors.privacy.message}</p>
