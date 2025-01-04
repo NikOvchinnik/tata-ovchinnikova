@@ -20,6 +20,7 @@ const BurgerModal = ({ isModalOpen, onCloseModal }) => {
     <Modal
       isOpen={isModalOpen}
       onRequestClose={onCloseModal}
+      shouldFocusAfterRender={false}
       shouldCloseOnOverlayClick={true}
       shouldCloseOnEsc={true}
       className={style.modalWindow}
