@@ -1,5 +1,5 @@
 .cardContainer {
-  width: 165px;
+  min-width: 165px;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -9,7 +9,7 @@
 }
 
 .imgContainer {
-  height: 220px;
+  min-height: 220px;
   position: relative;
   cursor: pointer;
 }
@@ -132,6 +132,16 @@
 .btnBuy:focus {
   border: 1px solid var(--nav);
   color: var(--nav);
+}
+
+@media screen and (min-width: 375px) {
+  .cardContainer {
+    width: 165px;
+  }
+
+  .imgContainer {
+    height: 220px;
+  }
 }
 
 @media screen and (min-width: 768px) {

@@ -1,19 +1,69 @@
 .aboutSection {
   display: flex;
-  gap: 32px;
+  flex-direction: column;
+  gap: 15px;
 }
 
 .textContainer {
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  width: 664px;
+  gap: 8px;
+}
+
+.title {
+    font-size: 22px; 
+    font-weight: 800;
+}
+
+.textAbout {
+  font-size: 14px;
+}
+
+.photoContainer {
+  width: 345px;
+  height: 345px;
+  border-radius: 30px;
+  background-image: url(/public/img/about.JPG);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+
+@media screen and (min-width: 768px) {
+.aboutSection {
+  flex-direction: row;
+}
+
+.textContainer {
+  width: 361px;
 }
 
 .title {
     font-size: 28px; 
     font-weight: 800;
-    margin-bottom: 20px;
+}
+
+.photoContainer {
+  width: 361px;
+  height: 361px;
+  border-radius: 30px;
+  background-image: url(/public/img/about.JPG);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+}
+
+@media screen and (min-width: 1440px) {
+.aboutSection {
+  gap: 30px;
+}
+
+.textContainer {
+  gap: 15px;
+  width: 690px;
 }
 
 .textAbout {
@@ -21,14 +71,16 @@
 }
 
 .photoContainer {
-  width: 664px;
-  height: 664px;
+  width: 690px;
+  height: 690px;
   border-radius: 30px;
   background-image: url(/public/img/about.JPG);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   position: relative;
+}
+
 }
 
 

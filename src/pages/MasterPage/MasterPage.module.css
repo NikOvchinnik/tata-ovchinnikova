@@ -1,17 +1,38 @@
 .mainContainer {
   padding: 0 15px;
-  margin: 15px auto 30px auto;
-  max-width: 1410px;
+  margin: 10px auto 30px auto;
+  max-width: 375px;
   min-height: 100vh;
 }
 
 .titleMaster {
-  font-size: 28px;
+  font-size: 22px;
   font-weight: 700;
 }
 
 .textMaster {
   color: var(--secondary-text);
-  font-size: 14px;
+  font-size: 12px;
   margin-bottom: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .mainContainer {
+    margin: 15px auto 30px auto;
+    max-width: 768px;
+  }
+
+  .titleMaster {
+    font-size: 28px;
+  }
+
+  .textMaster {
+  font-size: 14px;
+}
+}
+
+@media screen and (min-width: 1440px) {
+  .mainContainer {
+    max-width: 1440px;
+  }
 }
