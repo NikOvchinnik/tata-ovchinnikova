@@ -2,10 +2,20 @@ import Modal from 'react-modal';
 import style from './BurgerModal.module.css';
 import { NavLink } from 'react-router-dom';
 import Icon from '../Icon/Icon';
+import { useEffect } from 'react';
 
 Modal.setAppElement('#root');
 
 const BurgerModal = ({ isModalOpen, onCloseModal }) => {
+
+    useEffect(() => {
+      if (isModalOpen) {
+        document.body.classList.add(style.modalOpen);
+      } else {
+        document.body.classList.remove(style.modalOpen);
+      }
+    }, [isModalOpen]);
+  
   return (
     <Modal
       isOpen={isModalOpen}
@@ -13,6 +23,11 @@ const BurgerModal = ({ isModalOpen, onCloseModal }) => {
       shouldCloseOnOverlayClick={true}
       shouldCloseOnEsc={true}
       className={style.modalWindow}
+      style={{
+        overlay: {
+          backgroundColor: '#fff',
+        },
+      }}
     >
       <div className={style.modalContainer}>
         <nav className={style.navContainer}>
