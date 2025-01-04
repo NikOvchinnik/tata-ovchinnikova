@@ -1,21 +1,24 @@
 .formContainer {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .categoryList {
   display: flex;
-  gap: 20px;
+  gap: 6px;
+  flex-wrap: wrap;
 }
 
 .categoryLabel {
   display: flex;
-  padding: 6px 12px;
+  padding: 4px 6px;
   border: 1px solid var(--border);
   border-radius: 8px;
   color: var(--secondary-text);
   font-weight: 500;
+  font-size: 12px;
   cursor: pointer;
   transition: border 0.3s ease, color 0.3s ease;
 }
@@ -37,12 +40,17 @@
 
 .searchContainer {
   display: flex;
-  gap: 10px;
+  gap: 6px;
   align-items: center;
+  font-size: 12px;
+}
+
+.searchContainerHidden {
+  display: none;
 }
 
 .searchInput {
-  padding: 6px 12px;
+  padding: 4px 6px;
   border: 1px solid var(--border);
   border-radius: 8px;
   color: var(--secondary-text);
@@ -60,4 +68,43 @@
 .searchInput:focus {
   border: 1px solid var(--nav);
   color: var(--nav);
+}
+
+@media screen and (min-width: 768px) {
+  .formContainer {
+    margin-bottom: 20px;
+  }
+
+  .categoryLabel {
+    padding: 6px 12px;
+    font-size: 16px;
+  }
+
+  .searchContainer {
+    gap: 10px;
+    font-size: 16px;
+  }
+
+  .searchInput {
+    padding: 6px 12px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .formContainer {
+    margin-bottom: 20px;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  .categoryList {
+    gap: 6px 20px;
+  }
+
+  .desctopSearchContainer {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-size: 16px;
+  }
 }

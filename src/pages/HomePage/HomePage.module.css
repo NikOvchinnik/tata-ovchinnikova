@@ -1,12 +1,45 @@
 .mainContainer {
   padding: 0 15px;
-  margin: 15px auto 30px auto;
-  max-width: 1410px;
+  margin: 10px auto 30px auto;
+  max-width: 375px;
   min-height: 100vh;
 }
 
+.titleContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.searchBtn{
+  background-color: inherit;
+  padding: 2px 5px;
+  cursor: pointer;
+}
+
 .title {
-    margin-bottom: 8px;
-    font-size: 28px; 
-    font-weight: 700;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+@media screen and (min-width: 768px) {
+  .mainContainer {
+    margin: 15px auto 30px auto;
+    max-width: 768px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .mainContainer {
+    max-width: 1440px;
+  }
+
+  .searchBtn{
+    display: none;
+  }
 }

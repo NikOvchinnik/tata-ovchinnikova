@@ -16,7 +16,7 @@ const defaultValues = {
   category: 'Усі',
 };
 
-const FilterPanel = () => {
+const FilterPanel = ({ isSearchPanelOpen }) => {
   const dispatch = useDispatch();
   const idSearch = useId();
 
@@ -37,8 +37,7 @@ const FilterPanel = () => {
     );
   }, [searchValue, categoryValue, dispatch]);
 
-  const onSubmit = () => {
-  };
+  const onSubmit = () => {};
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className={style.formContainer}>
@@ -112,7 +111,11 @@ const FilterPanel = () => {
           </li>
         </ul>
       </div>
-      <div className={style.searchContainer}>
+      <div
+        className={`${style.desctopSearchContainer} ${
+          isSearchPanelOpen ? style.searchContainer : style.searchContainerHidden
+        }`}
+      >
         <label htmlFor={idSearch} className={style.searchLabel}>
           Пошук
         </label>
