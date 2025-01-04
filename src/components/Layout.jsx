@@ -7,8 +7,8 @@ export const Layout = ({ children }) => {
   return (
     <div>
       <AppBar />
-      {/* <Suspense fallback={<Loader />}>{children}</Suspense>
-      <Footer /> */}
+      {/* <Suspense fallback={<Loader />}>{children}</Suspense> */}
+      <Footer />
     </div>
   );
 };

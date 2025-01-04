@@ -4,18 +4,24 @@
 }
 
 .footerContainer {
-  padding: 20px 15px;
+  padding: 12px 15px;
   margin: 0 auto;
-  max-width: 1410px;
+  max-width: 375px;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 20px;
   color: var(--border);
 }
 
 .adressContainer {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 4px;
+}
+
+.adressIconsList {
+  display: flex;
+  gap: 10px;
 }
 
 .adressList {
@@ -24,7 +30,7 @@
 }
 
 .logoText {
-  font-weight: 700;
+  font-weight: 400;
   color: #fff;
 }
 
@@ -80,3 +86,36 @@
   transition: color 0.3s ease;
 }
 
+@media screen and (min-width: 768px) {
+  .footerContainer {
+    flex-direction: row;
+    padding: 20px 15px;
+    max-width: 768px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .adressContainer {
+    gap: 8px;
+  }
+
+  .logoText {
+    font-weight: 700;
+  }
+
+  .adressList {
+    flex-direction: column;
+    gap: 4px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .footerContainer {
+    max-width: 1440px;
+  }
+
+  .adressList {
+    flex-direction: row;
+    gap: 10px;
+  }
+}

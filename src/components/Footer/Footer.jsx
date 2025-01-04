@@ -8,7 +8,7 @@ const Footer = () => {
       <div className={style.footerContainer}>
         <div className={style.adressContainer}>
           <p className={style.logoText}>TATA OVCHINNIKOVA</p>
-          <ul className={style.adressList}>
+          <ul className={style.adressIconsList}>
             <li>
               <a
                 className={style.adressLink}
