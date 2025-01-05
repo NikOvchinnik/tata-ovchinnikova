@@ -11,6 +11,7 @@ const ModalSuccessfully = ({ isModalOpen, onCloseModal, card }) => {
       onRequestClose={onCloseModal}
       shouldCloseOnOverlayClick={true}
       shouldCloseOnEsc={true}
+      shouldFocusAfterRender={false}
       className={style.modalWindow}
       style={{
         overlay: {
