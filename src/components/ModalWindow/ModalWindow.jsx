@@ -76,7 +76,12 @@ const ModalWindow = ({
         >
           <div className={style.cardContainer}>
             <div className={style.imgContainer}>
-              <ImageGallery items={galleryImages} />
+              <ImageGallery
+                items={galleryImages}
+                showThumbnails={false}
+                showFullscreenButton={true}
+                useBrowserFullscreen={true}
+              />
               {card.isNew && (
                 <div className={style.newContainer}>
                   <p>NEW</p>
