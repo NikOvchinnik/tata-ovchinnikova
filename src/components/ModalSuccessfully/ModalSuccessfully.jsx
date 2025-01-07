@@ -1,10 +1,19 @@
 import Modal from 'react-modal';
 import style from './ModalSuccessfully.module.css';
 import Icon from '../Icon/Icon';
+import { useEffect } from 'react';
 
 Modal.setAppElement('#root');
 
 const ModalSuccessfully = ({ isModalOpen, onCloseModal, card }) => {
+  useEffect(() => {
+    if (isModalOpen) {
+      document.body.classList.add(style.modalOpen);
+    } else {
+      document.body.classList.remove(style.modalOpen);
+    }
+  }, [isModalOpen]);
+
   return (
     <Modal
       isOpen={isModalOpen}

@@ -55,7 +55,7 @@ const ModalCard = ({ card, openModalForm }) => {
         card.colors && (
           <div className={style.colorListContainer}>
             <div className={style.listContainer}>
-              <p className={style.titleListContainer}>Колір на моделі:</p>
+              <p className={style.titleListContainer}>Колір:</p>
               <p>{card.colors.join(', ')}</p>
             </div>
             <p className={style.colorText}>

@@ -1,3 +1,7 @@
+.modalOpen {
+  overflow: hidden;
+}
+
 .modalWindow {
   position: fixed;
   top: 50%;

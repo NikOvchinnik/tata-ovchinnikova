@@ -7,6 +7,7 @@ import ImageGallery from 'react-image-gallery';
 import 'react-image-gallery/styles/css/image-gallery.css';
 import { Scrollbars } from 'react-custom-scrollbars-2';
 import { useState } from 'react';
+import { useEffect } from 'react';
 
 Modal.setAppElement('#root');
 
@@ -25,6 +26,14 @@ const ModalWindow = ({
   const closeModalForm = () => {
     setModalFormIsOpen(false);
   };
+
+  useEffect(() => {
+    if (isModalOpen) {
+      document.body.classList.add(style.modalOpen);
+    } else {
+      document.body.classList.remove(style.modalOpen);
+    }
+  }, [isModalOpen]);
 
   const galleryImages = card.images.map(url => ({
     original: url,
@@ -49,7 +58,22 @@ const ModalWindow = ({
         <button className={style.btnClose} onClick={onCloseModal} type="button">
           <Icon id="x" width="20" height="20" />
         </button>
-        <Scrollbars style={{ width: 860, height: '75vh' }}>
+        <Scrollbars
+          style={{
+            width:
+              window.innerWidth <= 767
+                ? '100%'
+                : window.innerWidth <= 1439
+                ? '100%'
+                : 860,
+            height:
+              window.innerWidth <= 767
+                ? '75vh'
+                : window.innerWidth <= 1024
+                ? '70vh'
+                : '75vh',
+          }}
+        >
           <div className={style.cardContainer}>
             <div className={style.imgContainer}>
               <ImageGallery items={galleryImages} />
