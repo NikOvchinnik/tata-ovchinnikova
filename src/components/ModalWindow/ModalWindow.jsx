@@ -50,32 +50,10 @@ const ModalWindow = ({
       className={style.modalWindow}
       style={{
         overlay: {
-          backgroundColor: 'rgba(47, 47, 47, 0.6)',
+          zIndex: 1000,
         },
       }}
     >
-      <ImageGallery
-        items={galleryImages}
-        showFullscreenButton={true}
-        showThumbnails={false}
-        fullScreen={true}
-        // renderLeftNav={onClick => (
-        //   <button
-        //     className={`${style.navButton} ${style.navButtonLeft}`}
-        //     onClick={onClick}
-        //   >
-        //     <Icon id="keyboard_arrow_left" className={style.iconNav} />
-        //   </button>
-        // )}
-        // renderRightNav={onClick => (
-        //   <button
-        //     className={`${style.navButton} ${style.navButtonRight}`}
-        //     onClick={onClick}
-        //   >
-        //     <Icon id="keyboard_arrow_right" className={style.iconNav} />
-        //   </button>
-        // )}
-      />
       <div className={style.modalContainer}>
         <button className={style.btnClose} onClick={onCloseModal} type="button">
           <Icon id="x" width="20" height="20" />
