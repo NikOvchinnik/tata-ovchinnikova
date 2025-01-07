@@ -79,6 +79,22 @@
   line-height: 1.2;
 }
 
+.scrollHint {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  fill: white;
+  z-index: 5;
+}
+
+.scrollHint.left {
+  left: 10px;
+}
+
+.scrollHint.right {
+  right: 10px;
+}
+
 @media screen and (min-width: 768px) {
   .modalWindow {
     width: 738px;
