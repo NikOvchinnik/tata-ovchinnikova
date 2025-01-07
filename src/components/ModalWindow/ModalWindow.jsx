@@ -50,7 +50,7 @@ const ModalWindow = ({
       className={style.modalWindow}
       style={{
         overlay: {
-          zIndex: 1000,
+          backgroundColor: 'rgba(47, 47, 47, 0.6)',
         },
       }}
     >
@@ -78,9 +78,8 @@ const ModalWindow = ({
             <div className={style.imgContainer}>
               <ImageGallery
                 items={galleryImages}
-                showFullscreenButton={true}
+                showFullscreenButton={window.innerWidth > 1024}
                 showThumbnails={false}
-                fullScreen={true}
                 // renderLeftNav={onClick => (
                 //   <button
                 //     className={`${style.navButton} ${style.navButtonLeft}`}
