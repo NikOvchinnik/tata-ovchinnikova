@@ -7,6 +7,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 345px;
+  max-height: 80vh;
 }
 
 .modalContainer {
@@ -14,11 +16,8 @@
   background-color: var(--background);
   border-radius: 5px;
   padding: 20px 30px 20px 20px;
-  max-height: 85vh;
-  width: 345px;
   overflow-y: hidden;
 }
-
 
 .btnClose {
   width: 18px;
@@ -32,7 +31,7 @@
 }
 
 .btnClose:hover {
- fill: var(--nav);
+  fill: var(--nav);
 }
 
 .cardContainer {
@@ -81,62 +80,60 @@
 }
 
 @media screen and (min-width: 768px) {
+  .modalWindow {
+    width: 738px;
+  }
 
-.modalContainer {
-  max-height: 80vh;
-  width: 738px;
-}
+  .btnClose {
+    width: 32px;
+    height: 32px;
+  }
 
-.btnClose {
-  width: 32px;
-  height: 32px;
+  .cardContainer {
+    flex-direction: row;
+    gap: 20px;
+  }
 
-}
+  .imgContainer {
+    width: 334px;
+    height: 100%;
+  }
 
-.cardContainer {
-  flex-direction: row;
-  gap: 20px;
-}
+  .newContainer {
+    font-size: 20px;
+  }
 
-.imgContainer {
-  width: 334px;
-  height: 100%;
-}
+  .cardContent {
+    gap: 15px;
+    width: 334px;
+  }
 
-.newContainer {
-  font-size: 20px;
-}
-
-.cardContent {
-  gap: 15px;
-  width: 334px;
-}
-
-.cardTitle {
-  font-size: 24px;
-}
-
+  .cardTitle {
+    font-size: 24px;
+  }
 }
 
 @media screen and (min-width: 1440px) {
-.modalContainer {
-  padding: 40px 20px 40px 40px;
-  max-height: 85vh;
-  width: 100%;
-}
+  .modalWindow {
+    width: 920px;
+  }
 
-.btnClose {
-  top: 15px;
-  right: 20px;
-}
+  .modalContainer {
+    padding: 40px 20px 40px 40px;
+  }
 
-.imgContainer {
-  width: 415px;
-  height: 100%;
-}
+  .btnClose {
+    top: 15px;
+    right: 20px;
+  }
 
-.cardContent {
-  width: 425px;
-  padding-right: 20px;
-}
+  .imgContainer {
+    width: 415px;
+    height: 100%;
+  }
+
+  .cardContent {
+    width: 425px;
+    padding-right: 20px;
+  }
 }
