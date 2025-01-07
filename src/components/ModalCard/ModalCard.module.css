@@ -1,7 +1,8 @@
 .cardContainer {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 8px;
+  font-size: 12px;
 }
 
 .listContainer {
@@ -21,13 +22,13 @@
 
 .sizeItem {
   font-size: 8px;
-  padding: 2px 6px;
+  padding: 2px 4px;
   border: 1px solid var(--border);
   border-radius: 4px;
 }
 
 .sizeItemSale {
-  font-size: 10px;
+  font-size: 8px;
   padding: 2px 6px;
   border-radius: 4px;
   color: var(--background);
@@ -107,4 +108,20 @@
 
 .iconLevel {
   fill: var(--nav);
+}
+
+@media screen and (min-width: 768px) {
+  .cardContainer {
+    gap: 15px;
+    font-size: 16px;
+  }
+
+  .sizeItem {
+    padding: 2px 6px;
+  }
+
+  .sizeItemSale {
+    font-size: 10px;
+    padding: 2px 6px;
+  }
 }
