@@ -77,18 +77,15 @@ img {
   }
 }
 
-.image-gallery-content.fullscreen {
+/* .image-gallery-content.fullscreen {
   position: absolute !important;
   top: 50% !important;
   left: 50% !important;
   transform: translate(-50%, -50%) !important;
   z-index: 1000 !important;
-  /* width: 90vw !important;  
-  height: 90vh !important;  */
-}
+} */
 
-.image-gallery-content.fullscreen img {
+/* .image-gallery-content.fullscreen img {
   max-width: 90vw  !important; 
   max-height: 90vh !important; 
-  object-fit: contain !important;
-}
+} */
