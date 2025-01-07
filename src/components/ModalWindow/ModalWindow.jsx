@@ -78,7 +78,23 @@ const ModalWindow = ({
             <div className={style.imgContainer}>
               <ImageGallery
                 items={galleryImages}
-
+                showFullscreenButton={true}
+                // renderLeftNav={onClick => (
+                //   <button
+                //     className={`${style.navButton} ${style.navButtonLeft}`}
+                //     onClick={onClick}
+                //   >
+                //     <Icon id="keyboard_arrow_left" className={style.iconNav} />
+                //   </button>
+                // )}
+                // renderRightNav={onClick => (
+                //   <button
+                //     className={`${style.navButton} ${style.navButtonRight}`}
+                //     onClick={onClick}
+                //   >
+                //     <Icon id="keyboard_arrow_right" className={style.iconNav} />
+                //   </button>
+                // )}
               />
               {card.isNew && (
                 <div className={style.newContainer}>
