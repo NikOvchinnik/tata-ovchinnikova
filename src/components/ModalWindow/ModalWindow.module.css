@@ -34,7 +34,7 @@
   fill: var(--nav);
 }
 
-.navButton {
+/* .navButton {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -69,7 +69,7 @@
   fill: none;
   filter: drop-shadow(0 2px 2px #1a1a1a);
   transition: all 0.3s ease-out;
-}
+} */
 
 .cardContainer {
   display: flex;
@@ -127,10 +127,10 @@
     height: 32px;
   }
 
-  .navButton {
+  /* .navButton {
     width: 60px;
     height: 60px;
-  }
+  } */
 
   .cardContainer {
     flex-direction: row;
@@ -171,14 +171,14 @@
     right: 20px;
   }
 
-  .navButton {
+  /* .navButton {
     width: 80px;
     height: 80px;
-  }
+  } */
 
-  .iconNav {
+  /* .iconNav {
     stroke-width: 0.7;
-  }
+  } */
 
   .imgContainer {
     width: 415px;

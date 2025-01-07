@@ -66,12 +66,34 @@ img {
   height: auto;
 }
 
-.image-gallery-left-nav,
-.image-gallery-right-nav {
-  width: 60px;
-  height: 60px; 
+.react-image-gallery .react-image-gallery-image img {
+  object-fit: contain; /* або cover, залежно від ваших потреб */
+}
+
+.react-image-gallery .react-image-gallery-slides {
+  height: 100vh; /* Переконайтеся, що контейнер займає всю висоту екрану */
+  width: 100vw; /* І всю ширину */
+}
+
+.react-image-gallery .react-image-gallery-image {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100%;
 }
 
+.image-gallery-content.fullscreen {
+    background: #000;
+    z-index: 10000;
+}
+
+@media screen and (min-width: 768px) {
+  .image-gallery-left-nav,
+  .image-gallery-right-nav {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
