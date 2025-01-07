@@ -34,6 +34,43 @@
   fill: var(--nav);
 }
 
+.navButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+  fill: #fff;
+  background-color: inherit;
+  border: none;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+
+.navButton:hover {
+  transform: translateY(-50%) scale(1.1);
+}
+
+.navButtonLeft {
+  left: 0px;
+}
+
+.navButtonRight {
+  right: 0px;
+}
+
+.iconNav {
+  stroke: #fff;
+  stroke-width: 0.7;
+  fill: none;
+  filter: drop-shadow(0 2px 2px #1a1a1a);
+  transition: all 0.3s ease-out;
+}
+
 .cardContainer {
   display: flex;
   flex-direction: column;
@@ -90,6 +127,11 @@
     height: 32px;
   }
 
+  .navButton {
+    width: 60px;
+    height: 60px;
+  }
+
   .cardContainer {
     flex-direction: row;
     gap: 20px;
@@ -117,7 +159,7 @@
 @media screen and (min-width: 1440px) {
   .modalWindow {
     width: 920px;
-     max-height: 80vh;
+    max-height: 80vh;
   }
 
   .modalContainer {
@@ -127,6 +169,15 @@
   .btnClose {
     top: 15px;
     right: 20px;
+  }
+
+  .navButton {
+    width: 80px;
+    height: 80px;
+  }
+
+  .iconNav {
+    stroke-width: 0.5;
   }
 
   .imgContainer {
