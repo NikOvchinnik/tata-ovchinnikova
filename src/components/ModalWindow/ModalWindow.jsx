@@ -79,6 +79,7 @@ const ModalWindow = ({
               <ImageGallery
                 items={galleryImages}
                 showFullscreenButton={true}
+                showThumbnails={false}
                 // renderLeftNav={onClick => (
                 //   <button
                 //     className={`${style.navButton} ${style.navButtonLeft}`}
