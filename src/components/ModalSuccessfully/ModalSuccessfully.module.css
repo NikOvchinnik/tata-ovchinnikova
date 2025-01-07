@@ -13,17 +13,18 @@
   position: relative;
   background-color: var(--background);
   border-radius: 5px;
-  padding: 60px;
+  padding: 20px;
+  width: 345px;
   max-height: 85vh;
 }
 
 .btnClose {
-  width: 32px;
-  height: 32px;
+  width: 18px;
+  height: 18px;
   background-color: inherit;
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 10px;
+  right: 10px;
   fill: var(--main-text);
   transition: fill 0.3s ease;
 }
@@ -36,24 +37,24 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 30px;
-  width: 480px;
+  gap: 15px;
+  font-size: 12px;
 }
 
 .cardTitle {
-  font-size: 18px;
+  font-size: 14px;
   color: #28a745;
 }
 
 .contactsContainer {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
 }
 
 .contactsList {
   display: flex;
-  gap: 40px;
+  gap: 30px;
   color: var(--title);
   justify-content: center;
 }
@@ -67,13 +68,14 @@
 .footerIcon {
   fill: var(--title);
   transition: fill 0.3s ease;
+  width: 18px;
+  height: 18px;
 }
 
 .footerIcon:hover,
 .footerIcon:focus {
   fill: var(--nav);
 }
-
 
 .btnConfirm {
   background-color: var(--background);
@@ -89,4 +91,53 @@
 .btnConfirm:focus {
   border: 1px solid var(--nav);
   color: var(--nav);
+}
+
+@media screen and (min-width: 768px) {
+  .modalContainer {
+    padding: 40px;
+    max-height: 85vh;
+    width: 492px;
+  }
+
+  .btnClose {
+    top: 15px;
+    right: 15px;
+  }
+
+  .cardContainer {
+    gap: 30px;
+    font-size: 16px;
+  }
+
+  .cardTitle {
+    font-size: 18px;
+  }
+
+  .contactsContainer {
+    gap: 15px;
+  }
+
+  .contactsList {
+    gap: 40px;
+  }
+
+  .footerIcon {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+.modalContainer {
+  padding: 60px;
+  width: 700px;
+}
+
+.btnClose {
+  width: 32px;
+  height: 32px;
+  top: 20px;
+  right: 20px;
+}
 }

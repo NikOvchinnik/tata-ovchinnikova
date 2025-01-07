@@ -52,8 +52,6 @@ const ModalSuccessfully = ({ isModalOpen, onCloseModal, card }) => {
                 >
                   <Icon
                     id="insta"
-                    width="25"
-                    height="25"
                     className={style.footerIcon}
                   />
                 </a>
@@ -65,8 +63,6 @@ const ModalSuccessfully = ({ isModalOpen, onCloseModal, card }) => {
                 >
                   <Icon
                     id="telegram"
-                    width="25"
-                    height="25"
                     className={style.footerIcon}
                   />
                 </a>

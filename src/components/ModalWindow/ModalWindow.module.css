@@ -43,7 +43,7 @@
 
 .imgContainer {
   width: 295px;
-  height: 393px;
+  height: 100%;
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
@@ -100,7 +100,7 @@
 
 .imgContainer {
   width: 334px;
-  height: 445px;
+  height: 100%;
 }
 
 .newContainer {
@@ -131,12 +131,12 @@
 }
 
 .imgContainer {
-  width: 420px;
-  height: 550px;
+  width: 415px;
+  height: 100%;
 }
 
 .cardContent {
-  width: 420px;
+  width: 425px;
   padding-right: 20px;
 }
 }

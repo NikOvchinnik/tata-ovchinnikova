@@ -1,6 +1,7 @@
 import { lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { Layout } from './components/Layout';
+import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 
 const HomePage = lazy(() => import('./pages/HomePage/HomePage'));
 const MasterPage = lazy(() => import('./pages/MasterPage/MasterPage'));
@@ -15,6 +16,7 @@ const PrivacyPolicyPage = lazy(() => import('./pages/PrivacyPolicyPage/PrivacyPo
 const App = () => {
   return (
     <Layout>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/masterclass" element={<MasterPage />} />
