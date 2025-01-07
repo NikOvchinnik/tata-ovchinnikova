@@ -80,18 +80,7 @@ const ModalWindow = ({
                 items={galleryImages}
                 showThumbnails={false}
                 showFullscreenButton={true}
-                
               />
-              {window.innerWidth <= 767 && (
-                <>
-                  <div className={`${style.scrollHint} ${style.left}`}>
-                    <Icon id="x" width="20" height="20" />
-                  </div>
-                  <div className={`${style.scrollHint} ${style.right}`}>
-                    <Icon id="x" width="20" height="20" />
-                  </div>
-                </>
-              )}
               {card.isNew && (
                 <div className={style.newContainer}>
                   <p>NEW</p>

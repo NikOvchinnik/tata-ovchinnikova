@@ -74,3 +74,8 @@ img {
   justify-content: center;
   align-items: center;
 }
+
+.react-image-gallery .react-image-gallery-next,
+.react-image-gallery .react-image-gallery-prev {
+  display: block !important; 
+}
