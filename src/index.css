@@ -70,12 +70,19 @@ img {
 .image-gallery-right-nav {
   width: 60px;
   height: 60px; 
-  display: flex;
+  display: flex !important;
   justify-content: center;
   align-items: center;
 }
 
 .react-image-gallery .react-image-gallery-next,
 .react-image-gallery .react-image-gallery-prev {
-  display: block !important; 
+  display: block !important; /* Скасувати приховування */
+  z-index: 2; /* Встановити високий індекс, щоб перекрити інші елементи */
+  opacity: 1 !important; /* Переконатися, що стрілки видимі */
+}
+
+/* Перевірте, чи є інші стилі, що впливають на зображення */
+.react-image-gallery .react-image-gallery-image {
+  max-height: none !important; /* Забезпечити, щоб зображення не обмежували висоту */
 }
